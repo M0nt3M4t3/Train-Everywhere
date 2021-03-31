@@ -6,7 +6,11 @@ import os, sys
 
 @route("/")
 def startpage():  
-    return template("test_projekt")
+    return template("startsida")
+
+@route("/gym/")
+def gympage():
+    return template("gym")
 
     
 @route("/static/<filename>")

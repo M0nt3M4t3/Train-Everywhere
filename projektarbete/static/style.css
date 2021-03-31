@@ -22,6 +22,10 @@ main{
 }
 .nav-item {
     float:right;
-    padding-left: 100px;
+    padding-left: 150px;
     padding-top: 15px;
+}
+#map {
+    height: 450px;
+    width: 100%;
 }
