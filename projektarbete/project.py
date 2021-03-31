@@ -19,7 +19,7 @@ def list_utegym():
     
     return template("utegym", new_dir_list=new_dir_list)
 
-@route('/utegym/<pagename>/')
+@route('/utegym/<pagename>')
 def show_article(pagename):
     '''
     '''
