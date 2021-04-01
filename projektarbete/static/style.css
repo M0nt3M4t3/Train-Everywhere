@@ -29,3 +29,18 @@ main{
     height: 450px;
     width: 100%;
 }
+#andrasida {
+    text-align: center;
+    padding-top: 15px;
+}
+.carousel-inner {
+    height: 450px;
+}
+.carousel-item {
+    height: 450px;
+}
+#punktlista {
+    padding-top: 15px;
+    padding-left: 50px;
+    font-size: 30px;
+}

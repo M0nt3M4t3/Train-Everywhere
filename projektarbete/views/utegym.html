@@ -2,6 +2,7 @@
 <html lang="sv">
 
 <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <title>Utegym</title>
     <meta charset="utf-8">
     <link href="static/style.css" rel="stylesheet" type="text/css">
@@ -45,23 +46,41 @@
                 </div>
             </nav>
     
-    <header> 
-        <h1> test </h1>
+    <header>
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-pause="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="static/BBfciv3.jpg" class="d-block w-100" alt="Bild1">
+              </div>
+              <div class="carousel-item">
+                <img src="static/4-full-body-workouts-for-outdoors-outdoor-workout.img.jpeg" class="d-block w-100" alt="Bild2">
+              </div>
+              <div class="carousel-item">
+                <img src="static/photo-id-2005279277125-women-doing-workout-outdoors-on-a-street.jpg" class="d-block w-100" alt="Bild5">
+              </div>
+              <div class="carousel-item">
+                <img src="static/Workout-Outdoors-1.jpg" class="d-block w-100" alt="Bild7">
+              </div>
+            </div>
+          </div>
     </header>
-    <h2>Test</h2>
-    <ul>
+    <ul id="punktlista">
         %for gym in new_dir_list:
             <li>
                 <a href="/utegym/{{gym}}">{{gym}}</a>
             </li>
         %end
     </ul>
- 
+
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </script>
     
 </body>
