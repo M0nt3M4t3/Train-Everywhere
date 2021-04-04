@@ -31,7 +31,7 @@ def list_utegym():
 def show_article(pagename):
     '''
     '''
-    name = (pagename)
+    name = (pagename)+" utegym"
     pagename = (pagename)+".json"
     my_file = open(f"storage/{pagename}", "r")
     data = my_file.read()
