@@ -29,7 +29,7 @@ def list_utegym():
 def show_article(pagename):
     '''
     '''
-    cursor.execute ("""SELECT Omrade FROM Utegym WHERE Namn=?""", pagename)
+    cursor.execute ("""SELECT Beskrivning FROM Utegym WHERE Namn=?""", pagename)
     data = cursor.fetchall()
     cursor.execute ("""
                     SELECT R.Namn, R.Betyg, R.Datum, R.Kommentar
