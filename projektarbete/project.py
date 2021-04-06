@@ -7,7 +7,7 @@ import json
 import pyodbc as db
 server = 'localhost'
 username = 'sa'
-password = 'Cas_775370149'
+password = '#'
 database = 'Train_Everywhere'
 connection = db.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER=' + server + ';DATABASE=' +
 database + ';UID=' + username + ';PWD=' + password)
