@@ -65,9 +65,9 @@
           </div>
     </header>
     <ul id="punktlista">
-        %for gym in new_dir_list:
+        %for gym in gyms:
             <li>
-                <a href="/utegym/{{gym}}">{{gym}}</a>
+                <a href="/utegym/{{gym[0]}}">{{gym[0]}}</a>
             </li>
         %end
     </ul>
