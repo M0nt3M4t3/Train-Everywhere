@@ -22,7 +22,7 @@ def startpage():
 def list_utegym():
     ''' Sidan som visar upp alla utegym som punktlista, funktionen tar alla utegyms namn som finns i vår databastabell "utegym"
     och returnar detta som en lista till HTML dokumentet utegym.html'''
-    cursor.execute("SELECT Namn FROM Utegym")
+    cursor.execute("SELECT Namn FROM Utegym ORDER BY Namn ASC")
     gyms = cursor.fetchall()
     return template("utegym", gyms=gyms)
 
