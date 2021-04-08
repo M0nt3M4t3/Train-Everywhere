@@ -22,49 +22,31 @@ main{
 }
 .nav-item {
     float:right;
-    padding-left: 150px;
+    padding-left: 70px;
     padding-top: 15px;
 }
 #map {
     height: 450px;
     width: 100%;
 }
-#andrasida {
-    text-align: center;
-    padding-top: 15px;
-}
-.carousel-inner {
-    height: 450px;
-}
-.carousel-item {
-    height: 450px;
-}
 #punktlista {
-    padding-top: 15px;
-    padding-left: 50px;
-    font-size: 30px;
+    margin-top: 40px;
+    margin-left: 35%;
+    font-size: 20px;
+    position: absolute;
+    text-align: center;
+    list-style-type: none;
 }
-#picture1 {
-    margin: 20px;
-    width: 30%;
-    float: left;
-    
-}
-.Gym1 {
-    width: 265px;
-    height: 177px;
-    margin-left: 40px;
+#punktlista > li > a {
+    color: black;
+    font-family: monospace;
+    background-color: lavenderblush;
     box-shadow: 5px 5px 10px rgba(0,0,0, 0.5);
 }
-#picture2 {
-    margin: 20px;
-    width: 30%;
-    float:left;
-    padding-left: 35px;
+#punktlista > li {
+    margin-top: 10px;
 }
-#picture3 {
-    width: 30%;
-    float: right;
-    margin: 20px;
-    padding-left: 40px;
+#bakgrundsbild {
+    position: absolute;
+    box-shadow: 5px 5px 10px rgba(0,0,0, 0.5);
 }
