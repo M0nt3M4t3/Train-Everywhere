@@ -14,21 +14,22 @@ database + ';UID=' + username + ';PWD=' + password)
 cursor = connection.cursor() # type: db.Cursor
 
 @route("/")
-def startpage():  
+def startpage(): 
+    ''' Startsidan på hemsidan ''' 
     return template("startsida")
 
 @route("/utegym")
 def list_utegym():
-    '''
-    '''
-    cursor.execute("SELECT Namn FROM Utegym")
+    ''' Sidan som visar upp alla utegym som punktlista, funktionen tar alla utegyms namn som finns i vår databastabell "utegym"
+    och returnar detta som en lista till HTML dokumentet utegym.html'''
+    cursor.execute("SELECT Namn FROM Utegym ORDER BY Namn ASC")
     gyms = cursor.fetchall()
     return template("utegym", gyms=gyms)
 
 @route('/utegym/<pagename>')
 def show_article(pagename):
-    '''
-    '''
+    ''' Sidan för varje utegym, funktionen tar pagename och hämtar ut beskrivning av databastabellen "utegym" för det utegym
+    som det står i pagenamet att det är. Hämtar också ut alla recensioner ur databastabellen "recensioner" på samma viss.'''
     cursor.execute ("""SELECT Beskrivning FROM Utegym WHERE Namn=?""", pagename)
     data = cursor.fetchall()
     cursor.execute ("""

@@ -29,8 +29,10 @@
         <h1> test </h1>
     </header>
     <h2>{{pagename}}</h2>
-    
-        {{data[0]}}
+    <p>
+        %for d in data:
+            {{d[0]}}
+        %end
     </p>
 
     <p>
