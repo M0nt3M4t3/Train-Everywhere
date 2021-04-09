@@ -3,11 +3,11 @@
 
 from bottle import route, run, template, request, static_file
 import os, sys
-import json
 import pyodbc as db
+import helpers
 server = 'localhost'
 username = 'sa'
-password = '#'
+password = 'Cas_775370149'
 database = 'Train_Everywhere'
 connection = db.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER=' + server + ';DATABASE=' +
 database + ';UID=' + username + ';PWD=' + password)
@@ -39,12 +39,13 @@ def show_article(pagename):
                     WHERE U.Namn = ?
                     ORDER BY R.Datum;""", pagename)
     reviews = cursor.fetchall()
-    
-    return template("show_utegym",pagename=pagename, data=data, reviews=reviews)
+    text = data[0][0]
+    text = helpers.nl2br(text)
+    return template("show_utegym",pagename=pagename, data=text, reviews=reviews)
 
 @route("/static/<filename>")
 def static_files(filename):
     return static_file(filename, root="static")
 
-run(host='localhost', port=8000, debug=True, reloader=True)#("hit med HTTP-metoden POST")
+run(host='localhost', port=8080, debug=True, reloader=True)#("hit med HTTP-metoden POST")
 
