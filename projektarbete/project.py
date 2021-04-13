@@ -14,24 +14,29 @@ database + ';UID=' + username + ';PWD=' + password)
 cursor = connection.cursor() # type: db.Cursor
 
 @route("/")
-def startpage(): 
-    ''' Startsidan på hemsidan ''' 
+def start_page(): 
+    ''' Startsidan på hemsidan. ''' 
     return template("startsida")
 
 @route("/utegym")
 def list_utegym():
-    ''' Sidan som visar upp alla utegym som punktlista, funktionen tar alla utegyms namn som finns i vår databastabell "utegym"
-    och returnar detta som en lista till HTML dokumentet utegym.html'''
+    ''' Sidan som visar upp alla utegym som punktlista, funktionen tar alla 
+    utegyms namn som finns i vår databastabell "utegym" och returnar detta 
+    som en lista till HTML dokumentet utegym.html.
+    '''
     cursor.execute("SELECT Namn FROM Utegym ORDER BY Namn ASC")
     gyms = cursor.fetchall()
     return template("utegym", gyms=gyms)
 
 @route('/utegym/<pagename>')
-def show_article(pagename):
-    ''' Sidan för varje utegym, funktionen tar pagename och hämtar ut beskrivning av databastabellen "utegym" för det utegym
-    som det står i pagenamet att det är. Hämtar också ut alla recensioner ur databastabellen "recensioner" på samma viss.'''
+def show_utegym(pagename):
+    ''' Sidan för alla utegym. Funktionen tar pagename och hämtar ut 
+    beskrivning av databastabellen "utegym" för det utegym som det står
+    i pagenamet att det är. Hämtar också ut alla recensioner ur 
+    databastabellen "recensioner" på samma viss.
+    '''
     cursor.execute ("""SELECT Beskrivning FROM Utegym WHERE Namn=?""", pagename)
-    data = cursor.fetchall()
+    gym_info = cursor.fetchall()
     cursor.execute ("""
                     SELECT R.Namn, R.Betyg, R.Datum, R.Kommentar
                     FROM  Recensioner R JOIN Utegym U
@@ -39,9 +44,9 @@ def show_article(pagename):
                     WHERE U.Namn = ?
                     ORDER BY R.Datum;""", pagename)
     reviews = cursor.fetchall()
-    text = data[0][0]
+    text = gym_info[0][0]
     text = helpers.nl2br(text)
-    return template("show_utegym",pagename=pagename, data=text, reviews=reviews)
+    return template("show_utegym", pagename=pagename, gym_info=text, reviews=reviews)
 
 @route("/static/<filename>")
 def static_files(filename):
