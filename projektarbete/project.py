@@ -5,9 +5,11 @@ from bottle import route, run, template, request, static_file
 import os, sys
 import pyodbc as db
 import helpers
+import safety
+
 server = 'localhost'
-username = 'sa'
-password = '#'
+username = safety.CW[0]
+password = safety.CW[1]
 database = 'Train_Everywhere'
 connection = db.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER=' + server + ';DATABASE=' +
 database + ';UID=' + username + ';PWD=' + password)
