@@ -26,14 +26,16 @@
                 </div>
             </nav>
     <main>
-        <img src="/static/photo-id-2005279277125-women-doing-workout-outdoors-on-a-street.jpg" id="bakgrundsbild" alt="bakgrundsbild">
         <ul id="punktlista">
         %for gym in gyms:
             <li>
-                <a href="/utegym/{{gym[0]}}">{{gym[0]}}</a>
+                <a href="/utegym/{{gym[0]}}">
+                <img src="{{gym[1]}}">
+                <p>{{gym[0]}}</p>
+                </a>
             </li>
         %end
-    </ul>
+        </ul>
 </main> 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">

@@ -30,27 +30,46 @@ main{
     height: 450px;
     width: 100%;
 }
+
+/* Punktlista */
 #punktlista {
-    margin-top: 40px;
-    margin-left: 35%;
-    font-size: 20px;
     position: absolute;
-    text-align: center;
+    font-size: 20px;
     list-style-type: none;
-}
-#punktlista > li > a {
-    color: black;
-    font-family: monospace;
-    background-color: lavenderblush;
-    box-shadow: 5px 5px 10px rgba(0,0,0, 0.5);
+    margin-left: 3%;
+    margin-right: 3%;
 }
 #punktlista > li {
-    margin-top: 10px;
+    float: left;
+    text-align: center;
+    margin: 40px 20px;
 }
-#bakgrundsbild {
-    position: absolute;
-    box-shadow: 5px 5px 10px rgba(0,0,0, 0.5);
+#punktlista > li > a > p {
+    background-color: rgba(202, 202, 202, 0.199);
 }
+#punktlista > li > a > img {
+    max-width: 300px;
+    height: 100%;
+    opacity: 0.5;
+}
+#punktlista > li > a:link, a:visited {
+    color: black;
+    float: left;   
+    width: 300px;
+    height: 200px;
+}
+#punktlista > li > a:hover {
+    color: black;
+    text-decoration: none;
+}
+#punktlista > li > a:hover > img {
+    opacity: 1;
+}
+#punktlista > li > a:hover > p {
+    background-color: rgba(202, 202, 202, 0.445);
+}
+
+/* Info om gym */
 #info_gym {
     position: absolute;
     width: 60%;
