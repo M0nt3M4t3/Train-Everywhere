@@ -54,5 +54,5 @@ def show_utegym(pagename):
 def static_files(filename):
     return static_file(filename, root="static")
 
-run(host='localhost', port=8000, debug=True, reloader=True)#("hit med HTTP-metoden POST")
+run(host='localhost', port=8080, debug=True, reloader=True)#("hit med HTTP-metoden POST")
 
