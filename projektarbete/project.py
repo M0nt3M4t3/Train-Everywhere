@@ -5,14 +5,6 @@ from bottle import route, run, template, request, static_file, redirect
 import helpers
 import safety
 
-server = 'localhost'
-username = safety.CK[0]
-password = safety.CK[1]
-database = 'Train_Everywhere'
-connection = db.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER=' + server + ';DATABASE=' +
-database + ';UID=' + username + ';PWD=' + password)
-cursor = connection.cursor() # type: db.Cursor
-
 @route("/")
 def start_page(): 
     ''' Startsidan på hemsidan. ''' 
