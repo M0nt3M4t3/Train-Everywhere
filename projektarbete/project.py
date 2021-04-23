@@ -8,8 +8,8 @@ import helpers
 import safety
 
 server = 'localhost'
-username = safety.FB[0]
-password = safety.FB[1]
+username = safety.CK[0]
+password = safety.CK[1]
 database = 'Train_Everywhere'
 connection = db.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER=' + server + ';DATABASE=' +
 database + ';UID=' + username + ';PWD=' + password)
