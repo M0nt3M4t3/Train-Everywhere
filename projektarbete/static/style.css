@@ -1,8 +1,4 @@
-main{
-    width: 100%;
-    height: 100%;
-}
-#wrapper{
+main {
     width: 100%;
     height: 100%;
 }
@@ -32,62 +28,158 @@ main{
 }
 
 /* Punktlista */
-#punktlista {
+#lista_container {
+    width: 80%;
+    margin: auto;
+}
+.lista_ul {
+    padding: 0;
+    margin: auto;
+}
+.lista_li {
+    position: relative;
+}
+.lista_ul > li > a > img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.overlay {
     position: absolute;
-    font-size: 20px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    background-color: rgb(232, 236, 240);
+    width: 100%;
+    transition: .3s ease;
+}
+.lista_ul > li {
+    width: 23%;
+    display: inline-block;
     list-style-type: none;
-    margin-left: 3%;
-    margin-right: 3%;
+    margin: 10px;
 }
-#punktlista > li {
-    float: left;
+.text {
+    color: rgb(0, 0, 0);
+    background-color: rgb(232, 236, 240);
+    width: 100%;
+    white-space: nowrap;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
     text-align: center;
-    margin: 40px 20px;
+    height: 25px;
+    font-size: 20px;
+    margin-top: 0%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
 }
-#punktlista > li > a > p {
-    background-color: rgba(202, 202, 202, 0.199);
-}
-#punktlista > li > a > img {
-    max-width: 300px;
-    height: 100%;
-    opacity: 0.5;
-}
-#punktlista > li > a:link, a:visited {
-    color: black;
-    float: left;   
-    width: 300px;
-    height: 200px;
-}
-#punktlista > li > a:hover {
+.text:link, .text:hover, .text:visited {
     color: black;
     text-decoration: none;
 }
-#punktlista > li > a:hover > img {
-    opacity: 1;
+.lista_li:hover .overlay {
+    height: 35%
 }
-#punktlista > li > a:hover > p {
-    background-color: rgba(202, 202, 202, 0.445);
+.lista_li:hover img {
+    opacity: 0.5;
+    transition: .3s ease;
 }
 
 /* Info om gym */
 #info_gym {
-    position: absolute;
-    width: 60%;
-    height: 70%;
-    margin-left: 20%;
-    margin-top: 50px;
-    border-radius: 100px;
-    box-shadow: 10px 10px 15px rgba(0,0,0, 0.4);
-    background-color: #fff;
-    opacity: 0.4;
-}
-#info_gym > p {
-    text-align: center;
-    font-family: monospace;
-    font-size: 25px;
+    background-color: rgba(232, 236, 240);
+    opacity: 0.9;
+    width: 70%;
+    height: 100%;
+    margin: auto;
+    padding: 10px;
 }
 #info_gym > h1 {
-    font-family: monospace;
+    font-family: 'Times New Roman', Times, serif;
     text-align: center;
     margin-top: 40px;
+    padding-bottom: 10px;
+}
+#info_gym > p {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 20px;
+    margin: 10px;
+    padding-top: 20px;
+}
+
+/* Läsa recension */
+#recension_ruta {
+    background-color: white;
+    width: 80%;
+    height: 250px;
+    margin: auto;
+    overflow: scroll;
+}
+#recension_titel {
+    background-color:rgb(255, 255, 255);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    text-align: left;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(172, 200, 209);
+    border-bottom-width: 2px;
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+    padding: 10px;
+}
+#review {
+    height: auto;
+    margin: 5px;
+    margin-top: 10px;
+    padding: 5px;
+}
+#namn, #datum, #betyg {
+    display: inline;
+    font-weight: 500;
+}
+#namn, #datum, #betyg, #kommentar {
+    padding: 10px;
+}
+
+/* Ge recension */
+#skriv_recension {
+    background-color: white;
+    width: 50%;
+    height: 250px;
+    margin: auto;
+    margin-top: 40px;
+}
+#skriv_recension_titel {
+    background-color:rgb(255, 255, 255);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(172, 200, 209);
+    border-bottom-width: 2px;
+    width: 50%;
+    margin: auto;
+    padding: 10px; 
+}
+#skriv_recension > form {
+    background-color: white;
+    font-weight: 500;
+    height: auto;
+    margin: auto;
+    padding: 10px;
+}
+#skriv_recension > form > #comment {
+    width: 100%;
+    height: 70px;
+}
+
+/* Bakgrundsbild */
+#bakgrundsbild {
+    width: 100%;
+    height: auto;
+    position: absolute;
 }
