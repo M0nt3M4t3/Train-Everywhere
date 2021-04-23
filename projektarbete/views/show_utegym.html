@@ -31,26 +31,39 @@
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sök</button>
             </form>
             </div>
-        </nav>
-        <main>
-            <img src="/static/photo-id-2005279277125-women-doing-workout-outdoors-on-a-street.jpg" id="bakgrundsbild" alt="bakgrundsbild">
-            <div id="info_gym">
-                <h1>{{pagename}}</h1>
-                <p>
-
-                    {{!gym_info}}
-
+        </nav>    
+        <!-- Info box -->
+        <img src="/static/photo-id-2005279277125-women-doing-workout-outdoors-on-a-street.jpg" id="bakgrundsbild" alt="bakgrundsbild">
+        <div id="info_gym">
+                <h1>Beijersparks utegym</h1>
+                <p>Beijersparks utegym vänder sig till de som är äldre. Här finns en rad olika träningsredskap 
+                    där man kan träna bland annat armmuskler, benmuskler och ryggmuskler. Utegymmet finns i 
+                    stadsdelen Kirseberg och hittas i Beijersparkens mitt, i nära samband med dammen och parkens Kafé.
                 </p>
-                <p>
-                    %for review in reviews:
-                        {{review[0]}}
-                        {{review[1]}}
-                        {{review[2]}}
-                        {{review[3]}}
-                    %end
-                </p>
-            </div>
-        </main>
+                <!-- Läsa recensioner -->
+                <div id="recension_titel">Betyg och recensioner</div>
+                <div id="recension_ruta">
+                    <div id="recension">
+                        <p id="namn">Felicia</p>
+                        <p id="datum">2021-04-22</p>
+                        <p id="betyg">5/5</p>
+                        <p id="kommentar">Jättebra gym i love it</p>
+                    </div>
+                </div>
+                <!-- Ge recensioner -->
+                <div id="skriv_recension">
+                    <div id="skriv_recension_titel">Skriv en recension!</div>
+                    <form>
+                        <label for="fname">Förnamn: </label>
+                        <input type="text" id="fname" name="fname" required><br>
+                        <label for="vol">Betyg (0-5): </label><br>
+                        <input type="range" id="vol" name="vol" min="0" max="5" required><br>
+                        <label for="vol">Recension: </label><br>
+                        <input type="text" id="comment" name="comment" placeholder="Max 200 tecken" maxlenght="200"><br>
+                        <input type="submit" id="submit" value="Skicka">
+                    </form>
+                </div>
+        </div>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
         </script>    
