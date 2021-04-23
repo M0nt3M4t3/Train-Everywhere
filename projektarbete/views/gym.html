@@ -23,7 +23,7 @@
                   <a class="nav-link" href="/">Hem <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/utegym">Alla gym</a>
+                  <a class="nav-link" href="/gym">Alla gym</a>
                 </li>
               </ul>
               <form class="form-inline my-2 my-lg-0">
@@ -37,7 +37,7 @@
             <ul class="lista_ul">
                 %for gym in gyms:
                 <li class="lista_li">
-                    <a href="/utegym/{{gym[0]}}">
+                    <a href="/gym/{{gym[0]}}">
                         <img src="{{gym[1]}}" alt="Bild på gym">
                         <div class="overlay">
                             <div class="text">{{gym[0]}}</div>
