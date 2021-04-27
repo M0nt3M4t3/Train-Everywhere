@@ -55,14 +55,12 @@
                     <div id="skriv_recension_titel">Skriv en recension!</div>
                     <form action="/add_review" method = "POST">
                         <select id="gym" name="gym">
-                            %
                             <option> {{pagename}} </option>
-                            %end
-                        </select>
+                        </select><br>
                         <label for="name">Namn: </label>
                         <input type="text" id="name" name="name" required><br>
                         <label for="vol">Betyg (0-5): </label><br>
-                        <input type="range" id="vol" name="vol" min="0" max="5" required><br>
+                        <input type="range" id="vol" name="vol" min="0" max="5" ><br>
                         <label for="vol">Recension: </label><br>
                         <input type="text" id="comment" name="comment" placeholder="Max 200 tecken" maxlenght="200"><br>
                         <input type="submit" id="submit" value="Skicka">
