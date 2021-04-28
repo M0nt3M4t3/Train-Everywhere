@@ -20,14 +20,14 @@ def nl2br(text):
     '''
     return "<br>".join(text.splitlines())
 
-def call_info(name):
+def get_info(name):
     '''
     '''
     cursor.execute ("""SELECT Beskrivning FROM Utegym WHERE Namn=?""", name)
     gym_info = cursor.fetchall()
     return gym_info
 
-def call_reviews(gym):
+def get_reviews(gym):
     '''
     '''
     cursor.execute ("""
@@ -81,9 +81,24 @@ def get_gym_id(gym):
     gym_id = gym_id[0]
     return gym_id
 
-def call_gyms():
+def get_gyms():
     '''
     '''
     cursor.execute("SELECT Namn, Bild FROM Utegym ORDER BY Namn ASC")
     gyms = cursor.fetchall()
     return gyms
+
+def get_average(gym):
+    '''
+    '''
+    id = get_gym_id(gym)
+    cursor.execute("""SELECT sum(Betyg) as total_betyg, 
+                count(Gym_id) as total_count
+                FROM Recensioner
+                WHERE gym_id= ?""", id)
+    count = cursor.fetchall()
+    values_in_list = count[0]
+    total_sum_reviews = values_in_list[0]
+    total_reviews = values_in_list[1]
+    average = total_sum_reviews / total_reviews
+    return average

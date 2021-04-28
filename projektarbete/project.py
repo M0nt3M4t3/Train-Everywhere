@@ -1,5 +1,6 @@
 # coding: utf-8
 # Author: <>
+# pylint: disable=E1101
 
 from bottle import route, run, template, request, static_file, redirect 
 import helpers
@@ -17,7 +18,7 @@ def list_gym():
     som en lista till HTML dokumentet utegym.html.
     '''
 
-    gyms = helpers.call_gyms()
+    gyms = helpers.get_gyms()
     return template("gym", gyms=gyms)
 
 @route("/gym/<pagename>")
@@ -27,13 +28,13 @@ def show_gym(pagename):
     i pagenamet att det är. Hämtar också ut alla recensioner ur 
     databastabellen "recensioner" på samma viss.
     '''
-    gym_info = helpers.call_info(pagename)
+    gym_info = helpers.get_info(pagename)
     text = gym_info[0][0]
     text = helpers.nl2br(text)
 
-    reviews = helpers.call_reviews(pagename) 
-
-    return template("show_gym", pagename=pagename, gym_info=text, reviews=reviews)
+    reviews = helpers.get_reviews(pagename) 
+    average = helpers.get_average(pagename)
+    return template("show_gym", pagename=pagename, gym_info=text, reviews=reviews, average=average)
 
 @route("/add_review", method="POST")
 def update_review():
