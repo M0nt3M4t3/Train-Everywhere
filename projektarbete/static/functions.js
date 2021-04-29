@@ -1,3 +1,4 @@
+// Karta över gym
 function initMap() {
     const malmö = {
         lat: 55.60587,
@@ -232,4 +233,20 @@ function initMap() {
         map: map,
         title: "Rosengårds Utegym"
     });
+}
+
+// Sökfunktion
+function search_gym() {
+    let input = document.getElementById('searchbar').value
+    input=input.toLowerCase();
+    let x = document.getElementsByClassName('gym');
+      
+    for (i = 0; i < x.length; i++) { 
+        if (!x[i].innerHTML.toLowerCase().includes(input)) {
+            x[i].style.display="none";
+        }
+        else {
+            x[i].style.display="list-item";                 
+        }
+    }
 }
