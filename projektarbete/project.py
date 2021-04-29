@@ -4,7 +4,6 @@
 
 from bottle import route, run, template, request, static_file, redirect 
 import helpers
-import safety
 
 @route("/")
 def start_page(): 
