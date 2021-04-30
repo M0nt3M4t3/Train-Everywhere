@@ -26,9 +26,36 @@
                 <a class="nav-link" href="/gym">Alla gym</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Sök" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sök</button>
+            <form id="search">
+                <input id="searchbar" onkeyup="search_gym()" type="text" name="search" placeholder="Sök...">
+                <ul id="list">
+                    <a href="#"><li class="gym">Sundsbroparkens utegym</li></a>
+                    <a href="#"><li class="gym">Bulltoftas utegym</li></a>
+                    <a href="#"><li class="gym">Bellevueparkens utegym utegym</li></a>
+                    <a href="#"><li class="gym">Djupadals utegym</li></a>
+                    <a href="#"><li class="gym">Ymesparks utegym</li></a>
+                    <a href="#"><li class="gym">Hyllie sportbyns utegym</li></a>
+                    <a href="#"><li class="gym">Nydalaparkens utegym</li></a>
+                    <a href="#"><li class="gym">Lindängsparkens utegym</li></a>
+                    <a href="#"><li class="gym">Beijersparks utegym</li></a>
+                    <a href="#"><li class="gym">Lilla kalkbrottsparkens utegym</li></a>
+                    <a href="#"><li class="gym">Skogens utegym</li></a>
+                    <a href="#"><li class="gym">Gamla vattentornets utegym</li></a>
+                    <a href="#"><li class="gym">Ribersborgsstrandens utegym</li></a>
+                    <a href="#"><li class="gym">Öresunds funkis</li></a>
+                    <a href="#"><li class="gym">Rosengårds utegym</li></a>
+                    <a href="#"><li class="gym">Rösjöparkens utregym</li></a>
+                    <a href="#"><li class="gym">Sibbarps utegym</li></a>
+                    <a href="#"><li class="gym">Spillefirds fritidsområde</li></a>
+                    <a href="#"><li class="gym">Tygelsjös utegym</li></a>
+                    <a href="#"><li class="gym">Videdalsparkens utegym</li></a>
+                    <a href="#"><li class="gym">Sorgenfris utegym</li></a>
+                    <a href="#"><li class="gym">Stapelbäddsparkens utegym</li></a>
+                    <a href="#"><li class="gym">Scaniaparkens utegym</li></a>
+                    <a href="#"><li class="gym">Enskifteshagens utegym</li></a>
+                    <a href="#"><li class="gym">Blekeparkens utegym</li></a>
+                    <a href="#"><li class="gym">Bokskogens utegym</li></a>
+                </ul>
             </form>
             </div>
         </nav>    
@@ -41,6 +68,7 @@
                 <!-- Läsa recensioner -->
                 <div id="recension_titel">Betyg och recensioner</div>
                 <div id="recension_ruta">
+                    <p>average = {{average}}</p>
                     <div id="recension">
                         %for review in reviews:
                             <p id="namn">{{review[0]}}</p>
@@ -55,14 +83,12 @@
                     <div id="skriv_recension_titel">Skriv en recension!</div>
                     <form action="/add_review" method = "POST">
                         <select id="gym" name="gym">
-                            %
                             <option> {{pagename}} </option>
-                            %end
-                        </select>
+                        </select><br>
                         <label for="name">Namn: </label>
                         <input type="text" id="name" name="name" required><br>
                         <label for="vol">Betyg (0-5): </label><br>
-                        <input type="range" id="vol" name="vol" min="0" max="5" required><br>
+                        <input type="range" id="vol" name="vol" min="0" max="5" ><br>
                         <label for="vol">Recension: </label><br>
                         <input type="text" id="comment" name="comment" placeholder="Max 200 tecken" maxlenght="200"><br>
                         <input type="submit" id="submit" value="Skicka">

@@ -211,3 +211,27 @@ footer > div {
     margin-left: 40%;
     font-family: 'Times New Roman', Times, serif;
 }
+
+/* Sökruta */
+#searchbar {
+    width: 250px;
+}
+
+#list {
+    display: none;
+}
+#search:focus-within #list {
+    list-style-type: none;
+    background-color:white;
+    display: block;
+    position: absolute;
+    width: 250px;
+    padding: 5px;
+    padding-left: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#list > a, a:link, a:visited, a:hover {
+    font-size: 15px;
+    color: black;
+}
