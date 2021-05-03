@@ -1,3 +1,4 @@
+# Author: Cassandra & Filip 
 # coding: utf-8
 
 import os, sys
@@ -16,20 +17,23 @@ cursor = connection.cursor() # type: db.Cursor
 
 
 def nl2br(text):
-    '''
-    '''
+    '''Lägger in <br> där det är splits i texten som skickas in via 
+    parametern och returnerar sedan texten korrekt.'''
+    
     return "<br>".join(text.splitlines())
 
 def get_info(name):
-    '''
-    '''
+    '''Hämtar ut beskrivning från ett utegym som skickas in via parametern 
+    och returnerar sedan beskrivningen.'''
+    
     cursor.execute ("""SELECT Beskrivning FROM Utegym WHERE Namn=?""", name)
     gym_info = cursor.fetchall()
     return gym_info
 
 def get_reviews(gym):
-    '''
-    '''
+    '''Hämtar ut alla recensioner från valt gym som skickas in via parametern
+    och returnerar de som en tuple.'''
+   
     cursor.execute ("""
                     SELECT R.Namn, R.Betyg, R.Datum, R.Kommentar
                     FROM  Recensioner R JOIN Utegym U
@@ -40,8 +44,10 @@ def get_reviews(gym):
     return reviews
 
 def add_review(name, rating, comment, gym):
-    '''
-    '''
+    '''Lägger in nya recensioner från formuläret i show_gym, kallar även på
+    olika andra funktioner för att få all information som krävs i 
+    recensions-tabellen.'''
+
     review_id = get_id()
     name = (name)
     date = get_day()
@@ -52,8 +58,10 @@ def add_review(name, rating, comment, gym):
     connection.commit()
 
 def get_id():
-    '''
-    '''
+    '''Tar ut alla recensions_id värden i recensionstabellen och 
+    kollar sedan på det senaste värdet och plussar sedan en på det
+    senaste värdet och returnerar sedan detta.'''
+    
     cursor.execute ("""
                 SELECT Recension_id
                 FROM Recensioner""")
@@ -64,14 +72,14 @@ def get_id():
     return new_value
 
 def get_day():
-    '''
-    '''
+    '''Returnerar dagens datum.'''
+    
     date_today = date.today()
     return date_today
 
 def get_gym_id(gym):
-    '''
-    '''
+    '''Returnerar gymmets gym_id som skickats in via parametern.'''
+
     cursor.execute ("""
             SELECT Gym_id
             FROM Utegym
@@ -82,15 +90,17 @@ def get_gym_id(gym):
     return gym_id
 
 def get_gyms():
-    '''
-    '''
+    '''Returnerar alla Namn och bilder från Utegyms tabellen i Utegym från 
+    databasen och i bokstavsordning.'''
+
     cursor.execute("SELECT Namn, Bild FROM Utegym ORDER BY Namn ASC")
     gyms = cursor.fetchall()
     return gyms
 
 def get_average(gym):
-    '''
-    '''
+    '''Returnerar medelvärdet på alla gymmets recensioner som skickas in via 
+    parametern.'''
+    
     id = get_gym_id(gym)
     cursor.execute("""SELECT sum(Betyg) as total_betyg, 
                 count(Gym_id) as total_count
