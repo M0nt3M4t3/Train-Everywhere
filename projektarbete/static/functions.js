@@ -250,3 +250,13 @@ function search_gym() {
         }
     }
 }
+// Knapp som tar dig längst upp på sidan
+const ScrollToTop = document.querySelector("#ScrollToTop");
+
+ScrollToTop.addEventListener("click", function (){
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth"
+    });
+});

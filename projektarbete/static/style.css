@@ -235,3 +235,21 @@ footer > div {
     font-size: 15px;
     color: black;
 }
+/* Knapp som tar dig till toppen av sidan */
+#ScrollToTop {
+    position: fixed;
+    right: 15px;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #e62739;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.25);
+    color: white;
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+#ScrollToTop:active {
+    background: #cc2333;
+}
