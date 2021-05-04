@@ -1,5 +1,5 @@
 # coding: utf-8
-# Author: <>
+# Author: Filip & Cassandra
 # pylint: disable=E1101
 
 from bottle import route, run, template, request, static_file, redirect 
@@ -25,6 +25,7 @@ def show_gym(pagename):
     beskrivning av databastabellen "utegym" för det utegym som det står
     i pagenamet att det är. Hämtar också ut alla recensioner ur 
     databastabellen "recensioner" på samma viss.'''
+   
     gym_info = helpers.get_info(pagename)
     text = gym_info[0][0]
     text = helpers.nl2br(text)
@@ -35,8 +36,9 @@ def show_gym(pagename):
 
 @route("/add_review", method="POST")
 def update_review():
-    '''Hämtar ut värdena i formuläret från show_gym och skickas in det i 
+    '''Hämtar ut värdena i formuläret från show_gym och skickas in det i
     helpers funktion add_review.'''
+    
     pagename = request.forms.get("gym")
     name = request.forms.get("name")
     rating = request.forms.get("vol") 
@@ -49,4 +51,4 @@ def update_review():
 def static_files(filename):
     return static_file(filename, root="static")
 
-run(host='localhost', port=8050, debug=True, reloader=True)#("hit med HTTP-metoden POST")
+run(host='localhost', port=8080, debug=True, reloader=True)#("hit med HTTP-metoden POST")
