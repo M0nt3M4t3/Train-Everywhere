@@ -1,4 +1,4 @@
-# Author: Cassandra & Filip 
+# Author: Cassandra & Filip
 # coding: utf-8
 
 import os, sys
@@ -54,7 +54,8 @@ def add_review(name, rating, comment, gym):
     gym_id = get_gym_id(gym)
     rating = (rating)
     comment = (comment)
-    cursor.execute("INSERT INTO Recensioner VALUES (?, ?, ?, ?, ?, ?)", review_id, name, date, gym_id, rating, comment)
+    cursor.execute("""INSERT INTO Recensioner VALUES (?, ?, ?, ?, ?, ?)"""
+                    , review_id, name, date, gym_id, rating, comment)
     connection.commit()
 
 def get_id():
@@ -110,5 +111,5 @@ def get_average(gym):
     values_in_list = count[0]
     total_sum_reviews = values_in_list[0]
     total_reviews = values_in_list[1]
-    average = total_sum_reviews / total_reviews
+    average = round(total_sum_reviews / total_reviews)
     return average
