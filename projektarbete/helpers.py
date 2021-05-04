@@ -114,4 +114,5 @@ def get_average(gym):
         average = round(total_sum_reviews / total_reviews)
         return average
     except TypeError:
-        pass
+        average = 0
+        return average
