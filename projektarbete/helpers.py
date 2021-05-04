@@ -101,15 +101,17 @@ def get_gyms():
 def get_average(gym):
     '''Returnerar medelvärdet på alla gymmets recensioner som skickas in via 
     parametern.'''
-    
-    id = get_gym_id(gym)
-    cursor.execute("""SELECT sum(Betyg) as total_betyg, 
-                count(Gym_id) as total_count
-                FROM Recensioner
-                WHERE gym_id= ?""", id)
-    count = cursor.fetchall()
-    values_in_list = count[0]
-    total_sum_reviews = values_in_list[0]
-    total_reviews = values_in_list[1]
-    average = round(total_sum_reviews / total_reviews)
-    return average
+    try:
+        id = get_gym_id(gym)
+        cursor.execute("""SELECT sum(Betyg) as total_betyg, 
+                    count(Gym_id) as total_count
+                    FROM Recensioner
+                    WHERE gym_id= ?""", id)
+        count = cursor.fetchall()
+        values_in_list = count[0]
+        total_sum_reviews = values_in_list[0]
+        total_reviews = values_in_list[1]
+        average = round(total_sum_reviews / total_reviews)
+        return average
+    except TypeError:
+        pass

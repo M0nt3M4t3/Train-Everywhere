@@ -51,4 +51,4 @@ def update_review():
 def static_files(filename):
     return static_file(filename, root="static")
 
-run(host='localhost', port=8050, debug=True, reloader=True)#("hit med HTTP-metoden POST")
+run(host='localhost', port=8080, debug=True, reloader=True)#("hit med HTTP-metoden POST")
