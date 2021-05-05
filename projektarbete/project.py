@@ -32,7 +32,12 @@ def show_gym(pagename):
 
     reviews = helpers.get_reviews(pagename) 
     average = helpers.get_average(pagename)
-    return template("show_gym", pagename=pagename, gym_info=text, reviews=reviews, average=average)
+
+    picture = helpers.get_picture(pagename)
+    picture = picture[0][0]
+    print (picture)
+
+    return template("show_gym", pagename=pagename, gym_info=text, reviews=reviews, average=average, picture=picture)
 
 @route("/add_review", method="POST")
 def update_review():
@@ -51,4 +56,4 @@ def update_review():
 def static_files(filename):
     return static_file(filename, root="static")
 
-run(host='localhost', port=8080, debug=True, reloader=True)#("hit med HTTP-metoden POST")
+run(host='localhost', port=8000, debug=True, reloader=True)#("hit med HTTP-metoden POST")

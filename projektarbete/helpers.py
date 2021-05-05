@@ -30,6 +30,14 @@ def get_info(name):
     gym_info = cursor.fetchall()
     return gym_info
 
+def get_picture(name):
+    '''Hämtar ut bild från Utegyms tabellen för gymmet som skickats med via 
+    parametern'''
+
+    cursor.execute ("""SELECT Bild FROM Utegym WHERE Namn=?""", name)
+    picture = cursor.fetchall()
+    return picture
+
 def get_reviews(gym):
     '''Hämtar ut alla recensioner från valt gym som skickas in via parametern
     och returnerar de som en tuple.'''
