@@ -38,11 +38,11 @@ def show_gym(pagename):
 def update_review():
     '''Hämtar ut värdena i formuläret från show_gym och skickas in det i
     helpers funktion add_review.'''
-    
-    pagename = request.forms.get("gym")
+
     name = request.forms.get("name")
-    rating = request.forms.get("vol") 
+    rating = request.forms.get("rating") 
     comment = request.forms.get("comment")
+    pagename = request.forms.get("gym")
     helpers.add_review(name, rating, comment, pagename)
 
     return redirect("/gym/" +pagename) 

@@ -8,8 +8,8 @@ from datetime import date
 import datetime
 
 server = 'localhost'
-username = safety.CK[0]
-password = safety.CK[1]
+username = safety.CW[0]
+password = safety.CW[1]
 database = 'Train_Everywhere'
 connection = db.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER=' + server + ';DATABASE=' +
 database + ';UID=' + username + ';PWD=' + password)

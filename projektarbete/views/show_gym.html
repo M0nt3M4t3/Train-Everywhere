@@ -84,8 +84,8 @@
             <div id="skriv_recension">
                 <div id="skriv_recension_titel">Skriv en recension</div>
                     <form accept-charset="utf-8" action="/add_review" method = "POST">
-                        <label for="fname">Förnamn: </label>
-                        <input type="text" id="fname" name="fname" required><br>
+                        <label for="name">Namn:</label>
+                        <input type="text" id="name" name="name" required><br>
                         <label for="rating">Betyg (0-5):</label>
                         <select id="rating" name="rating">
                           <option>1</option>
@@ -96,9 +96,8 @@
                         </select><br>
                         <label for="comment">Recension: </label><br>
                         <textarea id="comment" name="comment" spellcheck="true" cols="65"></textarea>     
-                        <select id="form_gym" name="gym" readonly>
-                          <option>Beijersparks utegym</option>
-                        </select><br>
+                        <input type="checkbox" id="gym" name="gym" value="{{pagename}}" required>
+                        <label for="gym"> Jag vill lämna min recension på {{pagename}}</label><br>
                         <input type="submit" id="submit" value="Skicka!">
                     </form>
                 </div>
