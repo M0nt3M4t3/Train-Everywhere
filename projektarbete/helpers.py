@@ -71,14 +71,17 @@ def get_id():
     kollar sedan på det senaste värdet och plussar sedan en på det
     senaste värdet och returnerar sedan detta.'''
     
-    cursor.execute ("""
-                SELECT Recension_id
-                FROM Recensioner""")
-    reviews_id = cursor.fetchall()
-    last = reviews_id[-1]
-    value = last[0]
-    new_value = value + 1  
-    return new_value
+    try:
+        cursor.execute ("""
+                    SELECT Recension_id
+                    FROM Recensioner""")
+        reviews_id = cursor.fetchall()
+        last = reviews_id[-1]
+        value = last[0]
+        new_value = value + 1  
+        return new_value
+    except IndexError:
+        return 1
 
 def get_day():
     '''Returnerar dagens datum.'''
