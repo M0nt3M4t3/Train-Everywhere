@@ -11,36 +11,36 @@ server = 'localhost'
 username = safety.CW[0]
 password = safety.CW[1]
 database = 'Train_Everywhere'
-connection = db.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER=' + server + ';DATABASE=' +
-database + ';UID=' + username + ';PWD=' + password)
+connection = db.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER=' 
++ server + ';DATABASE=' + database + ';UID=' + username + ';PWD=' + password)
 cursor = connection.cursor() # type: db.Cursor
 
 
-def nl2br(text):
-    '''Lägger in <br> där det är splits i texten som skickas in via 
-    parametern och returnerar sedan texten korrekt.'''
+def line_break(text):
+    '''Lägger in <br> där det är splits i texten som skickas 
+    in via parametern och returnerar sedan texten korrekt.'''
     
     return "<br>".join(text.splitlines())
 
-def get_info(name):
-    '''Hämtar ut beskrivning från ett utegym som skickas in via parametern 
-    och returnerar sedan beskrivningen.'''
+def get_info(gym):
+    '''Hämtar ut beskrivning från ett utegym som skickas in via 
+    parametern och returnerar sedan beskrivningen.'''
     
-    cursor.execute ("""SELECT Beskrivning FROM Utegym WHERE Namn=?""", name)
+    cursor.execute ("""SELECT Beskrivning FROM Utegym WHERE Namn=?""", gym)
     gym_info = cursor.fetchall()
     return gym_info
 
-def get_picture(name):
-    '''Hämtar ut bild från Utegyms tabellen för gymmet som skickats med via 
-    parametern'''
+def get_picture(gym):
+    '''Hämtar ut bild från Utegyms tabellen för gymmet som skickats 
+    med via parametern'''
 
-    cursor.execute ("""SELECT Bild FROM Utegym WHERE Namn=?""", name)
+    cursor.execute ("""SELECT Bild FROM Utegym WHERE Namn=?""", gym)
     picture = cursor.fetchall()
     return picture
 
 def get_reviews(gym):
-    '''Hämtar ut alla recensioner från valt gym som skickas in via parametern
-    och returnerar de som en tuple.'''
+    '''Hämtar ut alla recensioner från valt gym som skickas in via 
+    parametern och returnerar de som en tuple.'''
    
     cursor.execute ("""
                     SELECT R.Namn, R.Betyg, R.Datum, R.Kommentar
@@ -52,9 +52,9 @@ def get_reviews(gym):
     return reviews
 
 def add_review(name, rating, comment, gym):
-    '''Lägger in nya recensioner från formuläret i show_gym, kallar även på
-    olika andra funktioner för att få all information som krävs i 
-    recensions-tabellen.'''
+    '''Lägger in nya recensioner från formuläret i show_gym, kallar 
+    även på olika andra funktioner för att få all information som 
+    krävs i recensions-tabellen.'''
 
     review_id = get_id()
     name = (name)
@@ -102,16 +102,16 @@ def get_gym_id(gym):
     return gym_id
 
 def get_gyms():
-    '''Returnerar alla Namn och bilder från Utegyms tabellen i Utegym från 
-    databasen och i bokstavsordning.'''
+    '''Returnerar alla Namn och bilder från Utegyms tabellen i Utegym 
+    från databasen och i bokstavsordning.'''
 
     cursor.execute("SELECT Namn, Bild FROM Utegym ORDER BY Namn ASC")
     gyms = cursor.fetchall()
     return gyms
 
 def get_average(gym):
-    '''Returnerar medelvärdet på alla gymmets recensioner som skickas in via 
-    parametern.'''
+    '''Returnerar medelvärdet på alla gymmets recensioner som skickas 
+    in via parametern.'''
     try:
         id = get_gym_id(gym)
         cursor.execute("""SELECT sum(Betyg) as total_betyg, 
