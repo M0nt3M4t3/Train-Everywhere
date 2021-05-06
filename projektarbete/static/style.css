@@ -3,11 +3,6 @@ main {
     width: 100%;
     height: 100%;
 }
-#startsida > h2 {
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    padding-top: 20px;
-}
 #background {
     background-image: url("/static/bakgrundsbild.jpg");
     background-color: rgb(190, 214, 170);
@@ -27,7 +22,7 @@ footer {
     margin-left: 15%;
     margin-bottom: 80px;
 }
-#logga {
+#logotype {
     width: 130px;
     height: 50px;
     margin-left: 10px;
@@ -35,16 +30,18 @@ footer {
 }
 
 /* Startsida */
-#startsida > h2 {
+#home_page > h2 {
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
     color: rgb(82, 82, 82);
     padding-top: 20px;
 }
-#startsida > p {
+#home_page > p {
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
     color: rgb(82, 82, 82);
+    width: 70%;
+    margin-left: 15%;
 }
 .nav-item {
     float:right;
@@ -57,18 +54,18 @@ footer {
 }
 
 /* Punktlista */
-#lista_container {
+#list_container {
     width: 80%;
     margin: auto;
 }
-.lista_ul {
+.list_ul {
     padding: 0;
     align-items: center;
 }
-.lista_li {
+.list_li {
     position: relative;
 }
-.lista_ul > li > a > img {
+.list_ul > li > a > img {
     width: 100%;
     height: auto;
 }
@@ -82,7 +79,7 @@ footer {
     background-color: rgb(107, 129, 89);
     transition: .3s ease;
 }
-.lista_ul > li {
+.list_ul > li {
     width: 22%;
     display: inline-block;
     list-style-type: none;
@@ -107,10 +104,10 @@ footer {
     color: white;
     text-decoration: none;
 }
-.lista_li:hover .overlay {
+.list_li:hover .overlay {
     height: 35%
 }
-.lista_li:hover img {
+.list_li:hover img {
     opacity: 0.5;
     transition: .3s ease;
 }
@@ -148,14 +145,14 @@ footer {
 }
 
 /* Läsa recension */
-#recension_ruta {
+#review_ruta {
     background-color: white;
     width: 80%;
     height: 200px;
     margin: auto;
     overflow-y: scroll;
 }
-#recension_titel {
+#review_titel {
     background-color:rgba(255, 255, 255, 0.5);
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 25px;
@@ -168,7 +165,7 @@ footer {
     margin-top: 40px;
     padding: 10px;
 }
-#recension_titel > p {
+#review_titel > p {
     display: inline;
     float: right;
     font-size: 23px;
@@ -180,34 +177,35 @@ footer {
     margin-top: 10px;
     padding: 5px;
 }
-#namn, #betyg {
+#name, #grade {
     display: inline;
     font-weight: 500;
     font-size: 18px;
     padding-left: 15px;
 }
-#datum {
+#date {
     padding-left: 15px;
     color: #ccc;
     font-weight: 500;
 }
-#kommentar {
+#comment {
     padding-left: 15px;
     padding-bottom: 10px;
     border-bottom-style: solid;
     border-bottom-color: #ccc;
     border-bottom-width: 1px;
+    width: 450px;
 }
 
 /* Skriva recension */
-#skriv_recension {
+#write_review {
     background-color: white;
     width: 50%;
     height: 100%;
     margin: auto;
     margin-top: 40px;
 }
-#skriv_recension_titel {
+#write_review_titel {
     background-color:rgba(230, 230, 230, 0.5);
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 25px;
@@ -216,7 +214,7 @@ footer {
     border-bottom-width: 5px;
     padding: 10px; 
 }
-#skriv_recension > form {
+#write_review > form {
     background-color: rgb(255, 255, 255);
     font-weight: 500;
     height: auto;
@@ -254,20 +252,21 @@ input[type="submit"]:hover {
 }
 
 /* Linje under rubriken på första sidan */
-.linje {
+.line {
     width: 80%;
     border: 1px solid; 
     opacity: 0.2;
     color: black;
 }
-footer > div {
+
+.footer_div {
     float: left;
     background-color: #f8f9fa;
     opacity: 0.8;
     width: 33.33%;
     height: 168px;
 }
-.footer_rubriker {
+.footer_heading {
     margin-top: 10px;
     margin-left: 40%;
     font-family: 'Times New Roman', Times, serif;
@@ -277,32 +276,6 @@ footer > div {
     margin-left: 40%;
     font-family: 'Times New Roman', Times, serif;
 }
-
-/* Linje under rubriken på första sidan */
-.linje {
-    width: 80%;
-    border: 1px solid; 
-    opacity: 0.2;
-    color: black;
-}
-footer > div {
-    float: left;
-    background-color: #f8f9fa;
-    opacity: 0.8;
-    width: 33.33%;
-    height: 168px;
-}
-.footer_rubriker {
-    margin-top: 10px;
-    margin-left: 40%;
-    font-family: 'Times New Roman', Times, serif;
-}
-.footer_text {
-    margin-top: 10px;
-    margin-left: 40%;
-    font-family: 'Times New Roman', Times, serif;
-}
-
 /* Sökruta */
 #searchbar {
     width: 250px;
@@ -333,7 +306,7 @@ footer > div {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: #e62739;
+    background: rgb(147, 180, 120);
     box-shadow: 0 0 10px rgb(0, 0, 0, 0.25);
     color: white;
     outline: none;
@@ -341,5 +314,5 @@ footer > div {
     border: none;
 }
 #ScrollToTop:active {
-    background: #cc2333;
+    background: rgb(66, 94, 42);
 }

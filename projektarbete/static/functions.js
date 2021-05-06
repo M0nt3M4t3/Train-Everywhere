@@ -250,6 +250,7 @@ function search_gym() {
         }
     }
 }
+
 // Knapp som tar dig längst upp på sidan
 const ScrollToTop = document.querySelector("#ScrollToTop");
 

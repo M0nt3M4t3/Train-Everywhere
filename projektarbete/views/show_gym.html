@@ -16,7 +16,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
             <a class="navbar-brand" href="/">
-                <img src="/static/logga.jpg" id="logga" alt="logga">  
+                <img src="/static/logga.jpg" id="logotype" alt="logotype">  
             </a>
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
@@ -66,23 +66,23 @@
             <h1>{{pagename}}</h1>
             <p>{{!gym_info}}</p>
             <!-- Läsa recensioner -->
-            <div id="recension_titel">
+            <div id="review_titel">
                 Betyg och recensioner
                 <p>Genomsnittsbetyg = {{average}}</p>
             </div>
-            <div id="recension_ruta">
-                <div id="recension">
+            <div id="review_ruta">
+                <div id="review">
                     %for review in reviews:
-                        <p id="namn">{{review[0]}}</p>
-                        <p id="betyg">{{review[1]}}/5</p>
-                        <p id="datum">{{review[2]}}</p>
-                        <p id="kommentar">{{review[3]}}</p>
+                        <p id="name">{{review[0]}}</p>
+                        <p id="grade">{{review[1]}}/5</p>
+                        <p id="date">{{review[2]}}</p>
+                        <p id="comment">{{review[3]}}</p>
                     %end
                 </div>
             </div>
             <!-- Ge recensioner -->
-            <div id="skriv_recension">
-                <div id="skriv_recension_titel">Skriv en recension</div>
+            <div id="write_review">
+                <div id="write_review_titel">Skriv en recension</div>
                     <form accept-charset="utf-8" action="/add_review" method = "POST">
                         <label for="name">Namn:</label>
                         <input type="text" id="name" name="name" required><br>
