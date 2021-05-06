@@ -1,14 +1,15 @@
 # Train-Everywhere
 
+https://github.com/M0nt3M4t3/Train-Everywhere
+
 ## Medlemmar:
-Carl Montelius
-Caroline Kristensen
-Cassandra Windahl
-Felicia Bergflo
-Filip Kroon
+- Carl Montelius
+- Caroline Kristensen
+- Cassandra Windahl
+- Felicia Bergflo
+- Filip Kroon
 
 ## Hur man öppnar upp webbsidan:
------------------------------------------------------------------------
 
 1. Skapa databasen genom att köra alla queurys du finner i Querys.docx
 i Azure Data Studio / Server Management Studio.
