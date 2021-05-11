@@ -194,7 +194,7 @@ footer {
     border-bottom-style: solid;
     border-bottom-color: #ccc;
     border-bottom-width: 1px;
-    width: 450px;
+    width: 100%;
 }
 
 /* Skriva recension */

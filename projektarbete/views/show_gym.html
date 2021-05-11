@@ -9,7 +9,8 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     </head>
     <body id="background">
-        <!-- Navbar -->
+
+<!-- Navbar -->
         <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -19,14 +20,15 @@
                 <img src="/static/logga.jpg" id="logotype" alt="logotype">  
             </a>
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                <a class="nav-link" href="/">Hem <span class="sr-only">(current)</span></a>
-                </li>
                 <li class="nav-item">
-                <a class="nav-link" href="/gym">Alla gym</a>
+                  <a class="nav-link" href="/">Hem</a>
                 </li>
-            </ul>
-            <!-- Sökruta i navbar -->
+                <li class="nav-item active">
+                  <a class="nav-link" href="/gym">Alla gym<span class="sr-only">(current)</span></a>
+                </li>
+              </ul>
+
+<!-- Sökruta i navbar -->
             <form id="search">
                 <input id="searchbar" onkeyup="search_gym()" type="text" name="search" placeholder="Sök...">
                 <ul id="list">
@@ -60,7 +62,8 @@
             </form>
             </div>
         </nav>
-        <!-- Info box -->
+
+<!-- Info box -->
         <div id="info_gym">
             <a class="btn btn-outline-secondary" id="buttton" href="/gym" role="button">Tillbaka</a>           
             <img src="{{picture}}" id="gym_pic" alt="Bild på gym">
@@ -81,7 +84,7 @@
                     %end
                 </div>
             </div>
-            <!-- Ge recensioner -->
+<!-- Ge recensioner -->
             <div id="write_review">
                 <div id="write_review_titel">Skriv en recension</div>
                     <form accept-charset="utf-8" action="/add_review" method="POST">
@@ -103,9 +106,8 @@
                     </form>
                 </div>
             </div>
-        <!-- JavaScript -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-        </script>    
+
+<!-- JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>    
     </body>
 </html>
