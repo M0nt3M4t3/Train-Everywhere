@@ -13,11 +13,23 @@ def start_page():
 @route("/gym")
 def list_gyms():
     ''' Sidan som visar upp alla utegym som punktlista, funktionen tar 
-    alla utegyms namn som finns i vår databastabell "utegym" och 
-    returnar detta som en lista till HTML dokumentet utegym.html.'''
+    alla utegyms namn som finns i vår databastabell "utegym" och kör
+    sedan igenom alla gymmen i vår funktion get_average där den lägger
+    till genomsnittsbetyg i slutet av listan sedan returnar den detta 
+    som en lista till HTML dokumentet utegym.html.'''
 
     gyms = helpers.get_gyms()
-    return template("gym", gyms=gyms)
+   
+    list_gyms = []
+    for gym in gyms: 
+        list_gym = [gym[0], gym[1]]
+        average = helpers.get_average(gym[0])
+        list_gym.append(average) 
+        list_gyms.append(list_gym)
+    
+    print (list_gyms)
+
+    return template("gym", gyms=list_gyms)
 
 @route("/gym/<pagename>")
 def show_gym(pagename):
