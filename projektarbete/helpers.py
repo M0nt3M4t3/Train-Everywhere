@@ -9,7 +9,7 @@ import datetime
 
 #establishing the connection
 conn = mysql.connector.connect(
-   user='root', password='Cas775370149', host='localhost', database='Train_Everywhere' 
+   user='root', password=safety.PW, host='localhost', database='Train_Everywhere' 
 )
 #Creating a cursor object using the cursor() method
 cursor = conn.cursor()
@@ -109,6 +109,8 @@ def get_gyms():
     '''Returnerar alla Namn och bilder från Utegyms tabellen i Utegym 
     från databasen och i bokstavsordning.'''
 
+    Pw = safety.PW
+    print (Pw)
     cursor.execute("SELECT Namn, Bild FROM Utegym ORDER BY Namn ASC")
     gyms = cursor.fetchall()
     return gyms
