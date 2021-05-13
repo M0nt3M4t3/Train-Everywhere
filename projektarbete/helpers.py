@@ -2,59 +2,62 @@
 # coding: utf-8
 
 import os, sys
-import pyodbc as db
+import mysql.connector
 import safety
 from datetime import date
 import datetime
 
-server = 'localhost'
-username = safety.CW[0]
-password = safety.CW[1]
-database = 'Train_Everywhere'
-connection = db.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER=' 
-+ server + ';DATABASE=' + database + ';UID=' + username + ';PWD=' + password)
-cursor = connection.cursor() # type: db.Cursor
+#establishing the connection
+conn = mysql.connector.connect(
+   user='root', password='Cas775370149', host='localhost', database='Train_Everywhere' 
+)
+#Creating a cursor object using the cursor() method
+cursor = conn.cursor()
 
 
 def line_break(text):
     '''Lägger in <br> där det är splits i texten som skickas 
     in via parametern och returnerar sedan texten korrekt.'''
     
-    return "<br>".join(text.splitlines())
+    return "<br>".join(text.splitlines())    
 
 def get_info(gym):
-    '''Hämtar ut beskrivning från ett utegym som skickas in via 
-    parametern och returnerar sedan beskrivningen.'''
-    
-    cursor.execute ("""SELECT Beskrivning FROM Utegym WHERE Namn=?""", gym)
+    '''Hämtar ut beskrivning från ett utegym som skickas in via parametern 
+    och returnerar sedan beskrivningen.'''
+
+    gym_infoQuery = "SELECT Beskrivning FROM Utegym WHERE Namn= '%s'" % (gym)
+    cursor.execute(gym_infoQuery)
     gym_info = cursor.fetchall()
     return gym_info
 
 def get_picture(gym):
-    '''Hämtar ut bild från Utegyms tabellen för gymmet som skickats 
-    med via parametern'''
+    '''Hämtar ut bild från Utegyms tabellen för gymmet som skickats med via 
+    parametern'''
 
-    cursor.execute ("""SELECT Bild FROM Utegym WHERE Namn=?""", gym)
+    gym_bildQuery = "SELECT Bild FROM Utegym WHERE Namn= '%s'" % (gym)
+    cursor.execute(gym_bildQuery)
     picture = cursor.fetchall()
     return picture
 
 def get_reviews(gym):
-    '''Hämtar ut alla recensioner från valt gym som skickas in via 
-    parametern och returnerar de som en tuple.'''
-   
-    cursor.execute ("""
+    '''Hämtar ut alla recensioner från valt gym som skickas in via parametern
+    och returnerar de som en tuple.'''
+
+    getReviewsQuery = """
                     SELECT R.Namn, R.Betyg, R.Datum, R.Kommentar
                     FROM  Recensioner R JOIN Utegym U
                     ON R.Gym_id = U.Gym_id
-                    WHERE U.Namn = ?
-                    ORDER BY R.Datum;""", gym)
+                    WHERE U.Namn = '%s'
+                    ORDER BY R.Datum;""" % (gym)
+    cursor.execute (getReviewsQuery)
     reviews = cursor.fetchall()
+    print (reviews)
     return reviews
 
 def add_review(name, rating, comment, gym):
-    '''Lägger in nya recensioner från formuläret i show_gym, kallar 
-    även på olika andra funktioner för att få all information som 
-    krävs i recensions-tabellen.'''
+    '''Lägger in nya recensioner från formuläret i show_gym, kallar även på
+    olika andra funktioner för att få all information som krävs i 
+    recensions-tabellen.'''
 
     review_id = get_id()
     name = (name)
@@ -62,9 +65,9 @@ def add_review(name, rating, comment, gym):
     gym_id = get_gym_id(gym)
     rating = (rating)
     comment = (comment)
-    cursor.execute("""INSERT INTO Recensioner VALUES (?, ?, ?, ?, ?, ?)"""
-                    , review_id, name, date, gym_id, rating, comment)
-    connection.commit()
+    commentQuery = "INSERT INTO Recensioner set recension_id =%s, namn= %s, datum=%s, gym_id= %s, betyg= %s, kommentar= %s "
+    cursor.execute(commentQuery, (review_id,name,date, gym_id, rating, comment))
+    conn.commit()
 
 def get_id():
     '''Tar ut alla recensions_id värden i recensionstabellen och 
@@ -92,10 +95,11 @@ def get_day():
 def get_gym_id(gym):
     '''Returnerar gymmets gym_id som skickats in via parametern.'''
 
-    cursor.execute ("""
+    gym_idQuery = """
             SELECT Gym_id
             FROM Utegym
-            WHERE Namn = ?""", gym)
+            WHERE Namn = '%s'""" % (gym)
+    cursor.execute (gym_idQuery)
     gym_id = cursor.fetchall()
     gym_id = gym_id[0]
     gym_id = gym_id[0]
@@ -110,14 +114,15 @@ def get_gyms():
     return gyms
 
 def get_average(gym):
-    '''Returnerar medelvärdet på alla gymmets recensioner som skickas 
-    in via parametern.'''
+    '''Returnerar medelvärdet på alla gymmets recensioner som skickas in via 
+    parametern.'''
     try:
         id = get_gym_id(gym)
-        cursor.execute("""SELECT sum(Betyg) as total_betyg, 
+        averageQuery = """SELECT sum(Betyg) as total_betyg, 
                     count(Gym_id) as total_count
                     FROM Recensioner
-                    WHERE gym_id= ?""", id)
+                    WHERE gym_id= '%s'""" % (id)
+        cursor.execute(averageQuery)
         count = cursor.fetchall()
         values_in_list = count[0]
         total_sum_reviews = values_in_list[0]
