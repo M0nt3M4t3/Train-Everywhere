@@ -53,7 +53,7 @@ footer {
     width: 100%;
 }
 
-/* Punktlista */
+/* Lista med gym */
 #list_container {
     width: 80%;
     margin: auto;
@@ -105,11 +105,24 @@ footer {
     text-decoration: none;
 }
 .list_li:hover .overlay {
-    height: 35%
+    height: 30%
 }
 .list_li:hover img {
-    opacity: 0.5;
+    opacity: 0.7;
     transition: .3s ease;
+}
+.list_li:hover p {
+    opacity: 1;
+}
+.list_li > a > p {
+    opacity: 0;
+    font-size: 45px;
+    font-family: 'Zilla Slab', serif;    
+    color:rgb(255, 255, 255);
+    position: absolute;
+    top: 25%;
+    left: 40%;
+    transition: 0.5s;
 }
 
 /* Info om gym */
