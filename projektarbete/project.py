@@ -27,7 +27,7 @@ def list_gyms():
         list_gym.append(average) 
         list_gyms.append(list_gym)
 
-    return template("gym", gyms=list_gyms)
+    return template("list_gym", gyms=list_gyms)
 
 @route("/gym/<pagename>")
 def show_gym(pagename):
