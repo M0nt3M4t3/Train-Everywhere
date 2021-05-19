@@ -1,5 +1,6 @@
 # Author: Cassandra & Filip
 # coding: utf-8
+# pylint: disable=E1101
 
 import os, sys
 import mysql.connector

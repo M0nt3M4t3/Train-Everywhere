@@ -87,7 +87,7 @@
 <!-- Ge recensioner -->
             <div id="write_review">
                 <div id="write_review_titel">Skriv en recension</div>
-                    <form accept-charset="utf-8" action="/add_review" method="POST">
+                    <form accept-charset="utf-8" onsubmit="popup_review()" action="/add_review" method="POST">
                         <label for="name">Namn:</label>
                         <input type="text" id="name" name="name" required><br>
                         <label for="rating">Betyg (0-5):</label>
@@ -108,6 +108,7 @@
             </div>
 
 <!-- JavaScript -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>    
+        <script type = "text/javascript" src="/static/functions.js"></script> 
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>  
     </body>
 </html>

@@ -593,3 +593,7 @@ ScrollToTop.addEventListener("click", function (){
         behavior: "smooth"
     });
 });
+
+function popup_review() {
+    alert("Tack för din recension!")
+}

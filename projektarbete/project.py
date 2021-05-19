@@ -1,6 +1,5 @@
 # coding: utf-8
 # Author: Filip & Cassandra
-# pylint: disable=E1101
 
 from bottle import route, run, template, request, static_file, redirect 
 import helpers
