@@ -10,8 +10,14 @@ function initMap() {
     });
 
     const Beijersparkscontent =
-    "Beijersparks Utegym"+
-    "Vi kommer ha länk till gymmets info sida här";
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<div id="bodyContent">' +
+    '<a href="http://localhost:8000/gym/Beijersparks%20utegym">Beijersparks utegym</a>' +
+    '<p>i Kirseberga </p>' +
+    "</div>" +
+    "</div>";
 
     const Beijerspark = new google.maps.Marker({
         position: {
@@ -31,8 +37,14 @@ function initMap() {
     });
 
     const Belluveparkcontent =
-    "Belluvepark Utegym"+
-    "Vi kommer ha länk till gymmets info sida här";
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<div id="bodyContent">' +
+    '<a href="http://localhost:8000/gym/Bellevueparkens%20utegym">Bellevueparkens utegym</a>' +
+    '<p>i Bellevue </p>' +
+    "</div>" +
+    "</div>";
 
     const Belluvepark = new google.maps.Marker({
         position: {
@@ -52,8 +64,14 @@ function initMap() {
     });
 
     const Blekeparkcontent =
-        "Blekeparken Utegym"+
-        "Vi kommer ha länk till gymmets info sida här";
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<div id="bodyContent">' +
+    '<a href="http://localhost:8000/gym/Blekeparkens%20utegym">Blekeparkens utegym</a>' +
+    '<p>i Oxie </p>' +
+    "</div>" +
+    "</div>";
 
     const Blekepark = new google.maps.Marker({
         position: {
@@ -74,8 +92,14 @@ function initMap() {
 
 
     const Bulltoftacontent =
-        "Bulltofta Utegym"+
-        "Vi kommer ha länk till gymmets info sida här";
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<div id="bodyContent">' +
+    '<a href="http://localhost:8000/gym/Bulltoftas%20utegym">Bulltoftas utegym</a>' +
+    '<p>i Bulltofta </p>' +
+    "</div>" +
+    "</div>";
 
     const Bulltofta = new google.maps.Marker({
         position: {
@@ -95,8 +119,14 @@ function initMap() {
     });
 
     const Djupadalcontent =
-        "Djupadal Utegym"+
-        "Vi kommer ha länk till gymmets info sida här";
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<div id="bodyContent">' +
+    '<a href="http://localhost:8000/gym/Djupadalsparkens%20utegym">Djupadals utegym</a>' +
+    '<p>i Djupadal</p>' +
+    "</div>" +
+    "</div>";
 
     const Djupadal = new google.maps.Marker({
         position: {
@@ -117,8 +147,14 @@ function initMap() {
 
 
     const Enskifteshagencontent =
-        "Enskifteshagen Utegym"+
-        "Vi kommer ha länk till gymmets info sida här";
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<div id="bodyContent">' +
+    '<a href="http://localhost:8000/gym/Enskifteshagens%20utegym">Enskifteshagens utegym</a>' +
+    '<p>i Östra Sorgenfri</p>' +
+    "</div>" +
+    "</div>";
 
     const Enskifteshagen = new google.maps.Marker({
         position: {
@@ -138,8 +174,14 @@ function initMap() {
     });
 
     const Söderkullacontent =
-        "Söderkulla Utegym"+
-        "Vi kommer ha länk till gymmets info sida här";
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<div id="bodyContent">' +
+    '<a href="http://localhost:8000/gym/Söderkullas%20utegym">Söderkullas utegym</a>' +
+    '<p>i Söderkulla</p>' +
+    "</div>" +
+    "</div>";
 
     const Söderkulla = new google.maps.Marker({
         position: {
@@ -160,8 +202,14 @@ function initMap() {
 
 
     const Ymersparkcontent =
-        "Ymersparks Utegym"+
-        "Vi kommer ha länk till gymmets info sida här";
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<div id="bodyContent">' +
+    '<a href="http://localhost:8000/gym/Ymesparks%20utegym">Ymesparks utegym</a>' +
+    '<p>i Hyllie</p>' +
+    "</div>" +
+    "</div>";
 
     const Ymerspark = new google.maps.Marker({
         position: {
@@ -181,8 +229,14 @@ function initMap() {
     });
 
     const Kalkbrottcontent =
-        "Lilla kalkbrottsparkens Utegym"+
-        "Vi kommer ha länk till gymmets info sida här";
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<div id="bodyContent">' +
+    '<a href="http://localhost:8000/gym/Lilla%20kalkbrottsparkens%20utegym">Lilla kalkbrottsparkens utegym</a>' +
+    '<p>i Klagshamn</p>' +
+    "</div>" +
+    "</div>";
 
     const Kalkbrott = new google.maps.Marker({
         position: {
@@ -203,8 +257,14 @@ function initMap() {
 
 
     const Lindängsparkencontent =
-        "Lindängsparkens Utegym"+
-        "Vi kommer ha länk till gymmets info sida här";
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<div id="bodyContent">' +
+    '<a href="http://localhost:8000/gym/Lindängsparkens%20utegym">Lindängsparkens utegym</a>' +
+    '<p>i Lindängen</p>' +
+    "</div>" +
+    "</div>";
 
     const Lindängen = new google.maps.Marker({
         position: {
@@ -224,8 +284,14 @@ function initMap() {
     });
 
     const Hylliesportbycontent =
-        "Hylliesportbyns Utegym"+
-        "Vi kommer ha länk till gymmets info sida här";
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<div id="bodyContent">' +
+    '<a href="http://localhost:8000/gym/Hyllie%20sportbyns%20utegym">Hyllie sportbyns utegym</a>' +
+    '<p>i Hyllie</p>' +
+    "</div>" +
+    "</div>";
 
     const Hylliesportby = new google.maps.Marker({
         position: {
@@ -246,8 +312,14 @@ function initMap() {
 
 
     const Skogencontent =
-        "Skogen"+
-        "Vi kommer ha länk till gymmets info sida här";
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<div id="bodyContent">' +
+    '<a href="http://localhost:8000/gym/Skogens%20utegym">Skogens utegym</a>' +
+    '<p>i Kronborg</p>' +
+    "</div>" +
+    "</div>";
 
     const Skogen = new google.maps.Marker({
         position: {
@@ -267,8 +339,14 @@ function initMap() {
     });
 
     const Gamlavattentornetcontent =
-        "Gamlavattentornets Utegym"+
-        "Vi kommer ha länk till gymmets info sida här";
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<div id="bodyContent">' +
+    '<a href="http://localhost:8000/gym/Gamla%20vattentornets%20utegym">Gamla vattentornets utegym</a>' +
+    '<p>i Kronborg</p>' +
+    "</div>" +
+    "</div>";
 
     const Gamlavattentornet = new google.maps.Marker({
         position: {
@@ -288,8 +366,14 @@ function initMap() {
     });
 
     const Ribbersborgsstrandencontent =
-        "Ribbersborgsstrandens Utegym"+
-        "Vi kommer ha länk till gymmets info sida här";
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<div id="bodyContent">' +
+    '<a href="http://localhost:8000/gym/Ribergsborgsstrandens%20utegym">Ribersborgsstrandens utegym</a>' +
+    '<p>i Ribersborgsstranden</p>' +
+    "</div>" +
+    "</div>";
 
     const Ribbersborgsstranden = new google.maps.Marker({
         position: {
@@ -310,8 +394,14 @@ function initMap() {
 
 
     const Öresundcontent =
-        "Öresunds Funkis"+
-        "Vi kommer ha länk till gymmets info sida här";
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<div id="bodyContent">' +
+    '<a href="hhttp://localhost:8000/gym/Öresunds%20Funkis">Öresunds Funkis</a>' +
+    '<p>i Ribersborgsstranden</p>' +
+    "</div>" +
+    "</div>";
 
     const Öresund = new google.maps.Marker({
         position: {
@@ -331,8 +421,14 @@ function initMap() {
     });
 
     const Videdalsparkencontent =
-        "Videdalsparkens Utegym"+
-        "Vi kommer ha länk till gymmets info sida här";
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<div id="bodyContent">' +
+    '<a href="http://localhost:8000/gym/Videdalsparkens%20utegym">Videdalsparkens utegym</a>' +
+    '<p>i Videdal</p>' +
+    "</div>" +
+    "</div>";
 
     const Videdal = new google.maps.Marker({
         position: {
@@ -350,16 +446,22 @@ function initMap() {
     Videdal.addListener("click", () => {
         Videdalsparkeninfo.open(map, Videdal);
     });
-
     const Tygelsjöcontent =
-        "Tygelsjös Utegym"+
-        "Vi kommer ha länk till gymmets info sida här";
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<div id="bodyContent">' +
+    '<a href="http://localhost:8000/gym/Tygelsjös%20utegym">Tygelsjös utegym</a>' +
+    '<p>i Tygelsjö </p>' +
+    "</div>" +
+    "</div>";
 
     const Tygelsjö = new google.maps.Marker({
         position: {
             lat: 55.519289241048554,
             lng: 12.992806989751623
         },
+        
         map: map,
         title: "Tygelsjös Utegym"
     });
@@ -374,8 +476,14 @@ function initMap() {
 
 
     const Sundsbroparkencontent =
-        "Sundsbroparkens Utegym"+
-        "Vi kommer ha länk till gymmets info sida här";
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<div id="bodyContent">' +
+    '<a href="http://localhost:8000/gym/Sundsbroparkens%20utegym">Sundsbroparkens utegym</a>' +
+    '<p>i Bunkeflostrand </p>' +
+    "</div>" +
+    "</div>";
 
     const Sundsbroparken = new google.maps.Marker({
         position: {
@@ -395,8 +503,15 @@ function initMap() {
     });
 
     const Stapelbäddsparkencontent =
-        "Stapelbäddsparkens Utegym"+
-        "Vi kommer ha länk till gymmets info sida här";
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<div id="bodyContent">' +
+    '<a href="http://localhost:8000/gym/Stapelbäddsparkens%20utegym">Stapelbäddsparkens utegym</a>' +
+    '<p>i Västra Hamnen </p>' +
+    "</div>" +
+    "</div>";
+       
 
     const Stapelbäddsparken = new google.maps.Marker({
         position: {
@@ -415,52 +530,70 @@ function initMap() {
         Stapelbäddsparkeninfo.open(map, Stapelbäddsparken);
     });
 
-    const Sorgenfricontent =
-        "Sorgenfris Utegym"+
-        "Vi kommer ha länk till gymmets info sida här";
+    const Nydalacontent =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<div id="bodyContent">' +
+    '<a href="http://localhost:8000/gym/Nydalaparkens%20utegym">Nydalaparkens utegym</a>' +
+    '<p>i Nydala</p>' +
+    "</div>" +
+    "</div>";
 
-    const Sorgenfri = new google.maps.Marker({
+    const Nydala = new google.maps.Marker({
         position: {
-            lat: 55.60147561963585,
-            lng: 13.019981306923125
+            lat: 55.572060,
+            lng: 13.018071
         },
         map: map,
-        title: "Sorgenfris Utegym"
+        title: "Nyadalas Utegym"
     });
 
-    const Sorgenfriinfo = new google.maps.InfoWindow({
-        content: Sorgenfricontent,
+    const Nydalainfo = new google.maps.InfoWindow({
+        content: Nydalacontent,
     });
 
-    Sorgenfri.addListener("click", () => {
-        Sorgenfriinfo.open(map, Sorgenfri);
+    Nydala.addListener("click", () => {
+        Nydalainfo.open(map, Nydala);
     });
 
-    const Spillefridcontent =
-        "Spillefrids fritidsområde"+
-        "Vi kommer ha länk till gymmets info sida här";
+    const Spillepengcontent =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<div id="bodyContent">' +
+    '<a href="http://localhost:8000/gym/Spillepengs%20fritidsområde">Spillepengs fritidsområde</a>' +
+    '<p>i Spillepengen </p>' +
+    "</div>" +
+    "</div>";
 
-    const Spillefrid = new google.maps.Marker({
+    const Spillepeng = new google.maps.Marker({
         position: {
             lat: 55.63511765975724,
             lng: 13.053903425796904
         },
         map: map,
-        title: "Spillefrids fritidsområde"
+        title: "Spillepengs fritidsområde"
     });
 
-    const Spillefridinfo = new google.maps.InfoWindow({
-        content: Spillefridcontent,
+    const Spillepenginfo = new google.maps.InfoWindow({
+        content: Spillepengcontent,
     });
 
-    Spillefrid.addListener("click", () => {
-        Spillefridinfo.open(map, Spillefrid);
+    Spillepeng.addListener("click", () => {
+        Spillepenginfo.open(map, Spillepeng);
     });
 
 
     const Sibbarpcontent =
-        "Sibbarps Utegym"+
-        "Vi kommer ha länk till gymmets info sida här";
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<div id="bodyContent">' +
+    '<a href="http://localhost:8000/gym/Sibbarps%20utegym">Sibbarps utegym</a>' +
+    '<p>i Sibbarp </p>' +
+    "</div>" +
+    "</div>";
 
     const Sibbarp = new google.maps.Marker({
         position: {
@@ -480,8 +613,14 @@ function initMap() {
     });
 
     const Scaniaparkencontent =
-        "Scania parkens Utegym"+
-        "Vi kommer ha länk till gymmets info sida här";
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<div id="bodyContent">' +
+    '<a href="http://localhost:8000/gym/Scaniaparkens%20utegym">Scaniaparkens utegym</a>' +
+    '<p>i Västra Hamnen </p>' +
+    "</div>" +
+    "</div>";
 
     const Scaniaparken = new google.maps.Marker({
         position: {
@@ -502,8 +641,15 @@ function initMap() {
 
 
     const Rörsjöparkencont =
-        "Rörsjöparkens utegym"+
-        "Vi kommer ha länk till gymmets info sida här";
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<div id="bodyContent">' +
+    '<a href="http://localhost:8000/gym/Rörsjöparkens%20utegym">Rörsjöparkens utegym</a>' +
+    '<p>i Rörsjöstaden </p>' +
+    "</div>" +
+    "</div>";
+
 
     const Rörsjöparken = new google.maps.Marker({
         position: {
@@ -523,31 +669,43 @@ function initMap() {
     });
 
 
-    const  Bokskogencontent=
-        "Bokskogens utegym"+
-        "Vi kommer ha länk till gymmets info sida här";
+    const  Torupcontent=
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<div id="bodyContent">' +
+    '<a href="http://localhost:8000/gym/Torups%20skogsgym">Torups skogsgym</a>' +
+    '<p>i Torup </p>' +
+    "</div>" +
+    "</div>";
 
-    const Bokskogen = new google.maps.Marker({
+    const Torup = new google.maps.Marker({
         position:{
             lat: 55.56678260698355,
             lng: 13.213829009659957
         },
         map: map,
-        title: "Bokskogen Utegym"
+        title: "Torups Utegym"
     })
 
-    const Bokskogeninfo = new google.maps.InfoWindow({
-        content: Bokskogencontent,
+    const Torupinfo = new google.maps.InfoWindow({
+        content: Torupcontent,
     });
 
-    Bokskogen.addListener("click", () => {
-        Bokskogeninfo.open(map, Bokskogen);
+    Torup.addListener("click", () => {
+        Torupinfo.open(map, Torup);
     });
 
 
     const Rosengårdcontent =
-        "Rosengårds Utegym"+
-        "Vi kommer ha länk till gymmets info sida här";
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<div id="bodyContent">' +
+    '<a href="http://localhost:8000/gym/Rosengårds%20utegym">Rosengårds utegym</a>' +
+    '<p>i Rosengård </p>' +
+    "</div>" +
+    "</div>";
 
     const Rosengård = new google.maps.Marker({
         position: {
