@@ -292,13 +292,37 @@ input[type="submit"]:hover {
 /* Sökruta */
 #searchbar {
     width: 250px;
+    border: none;
+    background-color: rgba(230, 230, 230, 0.5);
+}
+.search {
+    position: relative;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    box-sizing: border-box;
+    padding: 6px;
+    background-color: rgba(230, 230, 230, 0.9);
+}
+.search--loading::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    background: rgb(147, 180, 120);
+    border-radius: 5px;
+    animation: searchIndicator 0.5s infinite ease-in-out;
+}
+@keyframes searchIndicator {
+    0% { width: 15% }
+    50% { width: 100% }
+    100% { width: 15% }
 }
 #list {
     display: none;
 }
-#search:focus-within #list {
+.search:focus-within #list {
     list-style-type: none;
-    background-color:white;
+    background-color:rgba(230, 230, 230, 0.9);
     display: block;
     position: absolute;
     width: 250px;
@@ -310,7 +334,6 @@ input[type="submit"]:hover {
     font-size: 15px;
     color: black;
 }
-
 /* Knapp som tar dig till toppen av sidan */
 #ScrollToTop {
     position: fixed;
