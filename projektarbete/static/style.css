@@ -289,6 +289,7 @@ input[type="submit"]:hover {
     margin-left: 40%;
     font-family: 'Times New Roman', Times, serif;
 }
+
 /* Sökruta */
 #searchbar {
     width: 250px;
@@ -325,7 +326,8 @@ input[type="submit"]:hover {
     outline: none;
     cursor: pointer;
     border: none;
+    transition: 1;
 }
-#ScrollToTop:active {
-    background: rgb(66, 94, 42);
+#ScrollToTop:hover, #ScrollToTop:active {
+    background: rgb(171, 199, 148);
 }
