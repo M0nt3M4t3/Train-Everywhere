@@ -114,6 +114,18 @@ def get_gyms():
     gyms = cursor.fetchall()
     return gyms
 
+def get_gyms_average_5():
+    '''Returnerar alla Namn och bilder från Utegyms tabellen där Utegymmen i Utegym 
+    från databasen och i bokstavsordning.'''
+
+    cursor.execute("""SELECT Namn, Bild 
+                FROM info_with_average 
+                WHERE Average >=4.50
+                ORDER BY Namn ASC""")
+    gyms = cursor.fetchall()
+    return gyms
+
+
 def get_average(gym):
     '''Returnerar medelvärdet på alla gymmets recensioner som skickas in via 
     parametern.'''

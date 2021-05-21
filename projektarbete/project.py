@@ -1,5 +1,6 @@
-# coding: utf-8
+## coding: utf-8
 # Author: Filip & Cassandra
+# pylint: disable=E1101
 
 from bottle import route, run, template, request, static_file, redirect 
 import helpers
@@ -27,6 +28,49 @@ def list_gyms():
         list_gyms.append(list_gym)
 
     return template("list_gym", gyms=list_gyms)
+
+@route ("/gym/5")
+def list_of_gyms_with_5_average():
+    ''' Sidan som visar upp alla utegym med genomsnittabetyg 5 
+    som punktlista, funktionen tar alla utegyms namn som finns i 
+    vår databastabell "utegym" och kör sedan igenom alla gymmen 
+    i vår funktion get_average där den lägger till genomsnittsbetyg 
+    i slutet av listan sedan returnar den detta som en lista till HTML 
+    dokumentet utegym.html.'''
+
+    gyms = helpers.get_gyms_average_5()
+   
+    list_gyms = []
+    for gym in gyms: 
+        list_gym = [gym[0], gym[1]]
+        average = helpers.get_average(gym[0])
+        list_gym.append(average) 
+        list_gyms.append(list_gym)
+    
+    print (list_gyms)
+
+    return template("list_gym_5", gyms=list_gyms)
+
+@route ("gym/4")
+def list_of_gyms_with_4_average():
+    ''' Sidan som visar upp alla utegym med genomsnittabetyg 4 
+    som punktlista, funktionen tar alla utegyms namn som finns i 
+    vår databastabell "utegym" och kör sedan igenom alla gymmen 
+    i vår funktion get_average där den lägger till genomsnittsbetyg 
+    i slutet av listan sedan returnar den detta som en lista till HTML 
+    dokumentet utegym.html.'''
+
+    gyms = helpers.get_gyms_average_5()
+   
+    list_gyms = []
+    for gym in gyms: 
+        list_gym = [gym[0], gym[1]]
+        average = helpers.get_average(gym[0])
+        list_gym.append(average) 
+        list_gyms.append(list_gym)
+
+    return template("list_gym_4", gyms=list_gyms)
+
 
 @route("/gym/<pagename>")
 def show_gym(pagename):
