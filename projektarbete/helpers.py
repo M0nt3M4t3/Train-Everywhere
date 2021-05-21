@@ -115,8 +115,9 @@ def get_gyms():
     return gyms
 
 def get_gyms_average_5():
-    '''Returnerar alla Namn och bilder från Utegyms tabellen där Utegymmen i Utegym 
-    från databasen och i bokstavsordning.'''
+    '''Returnerar alla Namn och bilder från Utegyms tabellen där 
+    Utegymmen har average 5 i Utegym från databasen och i 
+    bokstavsordning.'''
 
     cursor.execute("""SELECT Namn, Bild 
                 FROM info_with_average 
@@ -125,6 +126,53 @@ def get_gyms_average_5():
     gyms = cursor.fetchall()
     return gyms
 
+def get_gyms_average_4():
+    '''Returnerar alla Namn och bilder från Utegyms tabellen där 
+    Utegymmen har average 4 i Utegym från databasen och i 
+    bokstavsordning.'''
+
+    cursor.execute("""SELECT Namn, Bild 
+                FROM info_with_average 
+                WHERE Average BETWEEN 4 AND 4.49
+                ORDER BY Namn ASC""")
+    gyms = cursor.fetchall()
+    return gyms
+
+def get_gyms_average_3():
+    '''Returnerar alla Namn och bilder från Utegyms tabellen där 
+    Utegymmen har average 4 i Utegym från databasen och i 
+    bokstavsordning.'''
+
+    cursor.execute("""SELECT Namn, Bild 
+                FROM info_with_average 
+                WHERE Average BETWEEN 3 AND 3.49
+                ORDER BY Namn ASC""")
+    gyms = cursor.fetchall()
+    return gyms
+
+def get_gyms_average_2():
+    '''Returnerar alla Namn och bilder från Utegyms tabellen där 
+    Utegymmen har average 2 i Utegym från databasen och i 
+    bokstavsordning.'''
+
+    cursor.execute("""SELECT Namn, Bild 
+                FROM info_with_average 
+                WHERE Average BETWEEN 2 AND 2.49
+                ORDER BY Namn ASC""")
+    gyms = cursor.fetchall()
+    return gyms
+
+def get_gyms_average_1():
+    '''Returnerar alla Namn och bilder från Utegyms tabellen där 
+    Utegymmen har average 1 i Utegym från databasen och i 
+    bokstavsordning.'''
+
+    cursor.execute("""SELECT Namn, Bild 
+                FROM info_with_average 
+                WHERE Average BETWEEN 1 AND 1.49
+                ORDER BY Namn ASC""")
+    gyms = cursor.fetchall()
+    return gyms
 
 def get_average(gym):
     '''Returnerar medelvärdet på alla gymmets recensioner som skickas in via 
