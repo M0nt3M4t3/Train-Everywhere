@@ -57,6 +57,7 @@ footer {
 #list_container {
     width: 80%;
     margin: auto;
+   
 }
 .list_ul {
     padding: 0;
@@ -408,3 +409,35 @@ input[type="submit"]:hover {
     padding-left: 10px;
     padding-top: 20px;   
   }
+#filter_container > li{
+    width: 10%;
+    float: left;
+    margin-bottom: 2%;
+    margin-top: 1%;
+    margin-right: 2%;
+    padding: 1%;
+    background-color: rgb(107, 129, 89);
+    color: white;
+    margin-left: 30px;
+    box-shadow: grey 2px 2px 2px 2px;
+    border-radius: 5%;
+  
+}
+
+#filter_container{
+    list-style: none;
+    margin-bottom: 100px;
+}
+
+#filter_container > li > a {
+    color: white;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    
+}
+#filter_container > li:hover {
+    background-color: rgb(76, 92, 63);
+    box-shadow: none;
+    
+}

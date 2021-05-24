@@ -67,18 +67,28 @@
 
 <!-- Lista med gym -->
         <div id="list_container">
-          <div class="dropdown_filter_average">
-            <button onclick="dropdownFilterForAverage()" class="dropbtn">Filtrera utifrån genomsnittsbetyg</button>
-            <div id="filter_dropdown" class="dropdown_values">
+          <p>Filtrera utifrån medelvärde av gym:</p>
+          <ul id="filter_container">
+            <li>
               <a href="/gym">Alla</a>
-              <a href="/gym/5">5</a>
-              <a href="/gym/4">4</a>
-              <a href="/gym/3">3</a>
-              <a href="/gym/2">2</a>
-              <a href="/gym/1">1</a>
-              
-            </div>
-          </div>
+            </li>
+            <li>
+              <a href="/gym/5">5/5</a>
+            </li>
+            <li>
+              <a href="/gym/4">4/5</a>
+            </li>
+            <li>
+              <a href="/gym/3">3/5</a>
+            </li>
+            <li>
+              <a href="/gym/2">2/5</a>
+            </li>
+            <li>
+              <a href="/gym/1">1/5</a>
+            </li>  
+          </ul>
+
             <ul class="list_ul">
                 %for gym in gyms:
                 <li class="list_li">
