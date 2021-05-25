@@ -46,8 +46,6 @@ def list_of_gyms_with_5_average():
         average = helpers.get_average(gym[0])
         list_gym.append(average) 
         list_gyms.append(list_gym)
-    
-    print (list_gyms)
 
     return template("list_gym_average_5", gyms=list_gyms)
 
