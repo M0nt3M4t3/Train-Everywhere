@@ -52,7 +52,6 @@ def get_reviews(gym):
                     ORDER BY R.Datum;""" % (gym)
     cursor.execute (getReviewsQuery)
     reviews = cursor.fetchall()
-    print (reviews)
     return reviews
 
 def add_review(name, rating, comment, gym):
