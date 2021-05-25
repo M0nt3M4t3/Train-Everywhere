@@ -53,66 +53,131 @@ footer {
     width: 100%;
 }
 
-/* Lista med gym */
-#list_container {
+/* Undermeny till sidan för lista av gym */
+#sub-menu {
+    background-color: rgb(248, 248, 250);
     width: 80%;
     margin: auto;
-   
+    padding-bottom: 30px;
 }
-.list_ul {
-    padding: 0;
-    align-items: center;
+#sub-menu > h2 {
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(82, 82, 82);
+    margin-left: 30px;
+    padding-top: 10px;
+    font-weight: 600;
 }
-.list_li {
+#sub-menu > p {
+    display: inline;
+    color: rgb(82, 82, 82);
+    margin-left: 30px;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background: rgb(153, 184, 129);
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+}
+.dropbtn:hover, .dropbtn:focus {
+    background: rgb(196, 212, 184);
+}
+.dropdown {
     position: relative;
+    display: inline;
+    float: right;
+    margin-right: 30px;
 }
-.list_ul > li > a > img {
-    width: 100%;
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f5f6f8;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #d8dadd;
+    color: white;
+    text-decoration: none;
+}
+.show {
+    display:block;
+}
+
+/* Lista med gym */ 
+.flexbox-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 80%;
+    background-color: rgb(248, 248, 250);
+}
+.flexbox-item {
+    position: relative;
+    margin: 10px;
+}
+.flexbox-item > a > img {
+    width:  270px;
     height: auto;
 }
-.overlay {
+.flexbox-item > a > p {
+    opacity: 0;
+    font-size: 40px;
+    color: white;
     position: absolute;
-    width: 100%;
+    top: 20%;
+    left: 40%;
+    transition: 0.5s;
+}
+.overlay-flex {
+    position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 0;
-    background-color: rgb(107, 129, 89);
+    height: 30px;
+    width: 100%;
+    background-color: rgb(222, 222, 228);
     transition: .3s ease;
 }
-.list_ul > li {
-    width: 22%;
-    display: inline-block;
-    list-style-type: none;
-    margin: 10px;
-    margin-bottom: 30px;
-}
-.text {
-    color: rgb(255, 255, 255);
-    background-color: rgb(107, 129, 89);
+.text-flex {
+    color: rgb(0, 0, 0);
+    background-color: rgb(222, 222, 228);
     width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
     text-align: center;
-    height: 28px;
+    height: 30px;
     font-size: 16px;
     margin-top: 0%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
-.text:link, .text:hover, .text:visited {
-    color: white;
+.text-flex:link, .text-flex:hover, .text-flex:visited {
+    color: black;
     text-decoration: none;
 }
-.list_li:hover .overlay {
+.flexbox-item:hover .overlay-flex {
     height: 30%
 }
-.list_li:hover img {
-    opacity: 0.7;
+.flexbox-item:hover img {
+    opacity: 0.5;
     transition: .3s ease;
 }
-.list_li:hover p {
+.flexbox-item:hover p {
     opacity: 1;
 }
 .list_li > a > p {
@@ -125,6 +190,7 @@ footer {
     left: 40%;
     transition: 0.5s;
 }
+
 /* Info om gym */
 #info_gym {
     background-color: rgba(232, 236, 240, 0.9);
@@ -271,7 +337,6 @@ input[type="submit"]:hover {
     opacity: 0.2;
     color: black;
 }
-
 .footer_div {
     float: left;
     background-color: #f8f9fa;
@@ -355,94 +420,6 @@ input[type="submit"]:hover {
     background: rgb(171, 199, 148);
 }
 
-/* Dropdown Button för filtrering*/
-.dropbtn {
-    background-color: rgb(107, 129, 89);
-    color: white;
-    padding: 16px;
-    font-size: 14px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  /* Dropdown button on hover & focus */
-  .dropbtn:hover, .dropbtn:focus {
-    background-color: rgb(76, 92, 63)
-  }
-  
-  /* The container <div> - needed to position the dropdown content */
-  .dropdown_filter {
-    position: relative;
-    display: inline-block;
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown_values {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1d3;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdown_values a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdown_values a:hover {
-      background-color: rgb(107, 129, 89);
-      color: #f8f9fa;
-    }
-  
-  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-  .show {display:block;
-}
-.dropdown_filter_average {
-    width: 300px;
-    padding-left: 10px;
-    padding-top: 20px;   
-  }
-#filter_container > li{
-    width: 10%;
-    float: left;
-    margin-bottom: 2%;
-    margin-top: 1%;
-    margin-right: 2%;
-    padding: 1%;
-    background-color: rgb(107, 129, 89);
-    color: white;
-    margin-left: 30px;
-    box-shadow: grey 2px 2px 2px 2px;
-    border-radius: 5%;
-  
-}
-
-#filter_container{
-    list-style: none;
-    margin-bottom: 100px;
-}
-
-#filter_container > li > a {
-    color: white;
-    text-align: center;
-    display: block;
-    text-decoration: none;
-    
-}
-#filter_container > li:hover {
-    background-color: rgb(76, 92, 63);
-    box-shadow: none;
-    
-}
-.btn.btn-outline-secondary {
-    font-family: 'Times New Roman', Times, serif;
-}
 /* Responsiv design */
 @media screen and (max-width: 600px) {
 
@@ -469,6 +446,5 @@ input[type="submit"]:hover {
     float: left;
 }
 #name {
-    width: 160px; 
-}
+    width: 160px;
 }
