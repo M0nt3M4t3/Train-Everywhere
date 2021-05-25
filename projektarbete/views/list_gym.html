@@ -10,108 +10,103 @@
         <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@600&display=swap" rel="stylesheet">        
        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     </head>
-    <body>
+    <body id="background">
 
 <!-- Navbar -->
-        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="/">
-            <img src="/static/logga.jpg" id="logotype" alt="logotype">  
-        </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link" href="/">Hem</a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="/gym">Alla gym<span class="sr-only">(current)</span></a>
-                </li>
-              </ul>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">
+        <img src="/static/logga.jpg" id="logotype" alt="logotype">  
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Hem</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/gym">Alla gym<span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
 
 <!-- Sökruta i navbar -->
-          <form class="search">
-            <input id="searchbar" onkeyup="search_gym()" type="text" name="search" placeholder="Sök...">
-            <ul id="list">
-                <li class="gym"><a href="#">Sundsbroparkens utegym</a></li>
-                <li class="gym"><a href="#">Bulltoftas utegym</a></li>
-                <li class="gym"><a href="#">Bellevueparkens utegym</a></li>
-                <li class="gym"><a href="#">Djupadals utegym</a></li>
-                <li class="gym"><a href="#">Ymesparks utegym</a></li>
-                <li class="gym"><a href="#">Hyllie sportbyns utegym</a></li>
-                <li class="gym"><a href="#">Nydalaparkens utegym</a></li>
-                <li class="gym"><a href="#">Lindängsparkens utegym</a></li>
-                <li class="gym"><a href="#">Beijersparks utegym</a></li>
-                <li class="gym"><a href="#">Lilla kalkbrottsparkens utegym</a></li>
-                <li class="gym"><a href="#">Skogens utegym</a></li>
-                <li class="gym"><a href="#">Gamla vattentornets utegym</a></li>
-                <li class="gym"><a href="#">Ribersborgsstrandens utegym</a></li>
-                <li class="gym"><a href="#">Öresunds funkis</a></li>
-                <li class="gym"><a href="#">Rosengårds utegym</a></li>
-                <li class="gym"><a href="#">Rösjöparkens utregym</a></li>
-                <li class="gym"><a href="#">Sibbarps utegym</a></li>
-                <li class="gym"><a href="#">Spillefirds fritidsområde</a></li>
-                <li class="gym"><a href="#">Tygelsjös utegym</a></li>
-                <li class="gym"><a href="#">Videdalsparkens utegym</a></li>
-                <li class="gym"><a href="#">Sorgenfris utegym</a></li>
-                <li class="gym"><a href="#">Stapelbäddsparkens utegym</a></li>
-                <li class="gym"><a href="#">Scaniaparkens utegym</a></li>
-                <li class="gym"><a href="#">Enskifteshagens utegym</a></li>
-                <li class="gym"><a href="#">Blekeparkens utegym</a></li>
-                <li class="gym"><a href="#">Bokskogens utegym</a></li>
-            </ul>
-          </form>
-          </div>
-        </nav>
-
-<!-- Lista med gym -->
-        <div id="list_container">
-          <p>Filtrera utifrån medelvärde av gym:</p>
-          <ul id="filter_container">
-            <li>
-              <a href="/gym">Alla</a>
-            </li>
-            <li>
-              <a href="/gym/5">5/5</a>
-            </li>
-            <li>
-              <a href="/gym/4">4/5</a>
-            </li>
-            <li>
-              <a href="/gym/3">3/5</a>
-            </li>
-            <li>
-              <a href="/gym/2">2/5</a>
-            </li>
-            <li>
-              <a href="/gym/1">1/5</a>
-            </li>  
+        <form class="search">
+          <input id="searchbar" onkeyup="search_gym()" type="text" name="search" placeholder="Sök...">
+          <ul id="list">
+            <li class="gym"><a href="#">Sundsbroparkens utegym</a></li>
+            <li class="gym"><a href="#">Bulltoftas utegym</a></li>
+            <li class="gym"><a href="#">Bellevueparkens utegym</a></li>
+            <li class="gym"><a href="#">Djupadals utegym</a></li>
+            <li class="gym"><a href="#">Ymesparks utegym</a></li>
+            <li class="gym"><a href="#">Hyllie sportbyns utegym</a></li>                <li class="gym"><a href="#">Nydalaparkens utegym</a></li>
+            <li class="gym"><a href="#">Lindängsparkens utegym</a></li>
+            <li class="gym"><a href="#">Beijersparks utegym</a></li>
+            <li class="gym"><a href="#">Lilla kalkbrottsparkens utegym</a></li>
+            <li class="gym"><a href="#">Skogens utegym</a></li>
+            <li class="gym"><a href="#">Gamla vattentornets utegym</a></li>
+            <li class="gym"><a href="#">Ribersborgsstrandens utegym</a></li>
+            <li class="gym"><a href="#">Öresunds funkis</a></li>
+            <li class="gym"><a href="#">Rosengårds utegym</a></li>
+            <li class="gym"><a href="#">Rösjöparkens utregym</a></li>
+            <li class="gym"><a href="#">Sibbarps utegym</a></li>
+            <li class="gym"><a href="#">Spillefirds fritidsområde</a></li>
+            <li class="gym"><a href="#">Tygelsjös utegym</a></li>
+            <li class="gym"><a href="#">Videdalsparkens utegym</a></li>
+            <li class="gym"><a href="#">Sorgenfris utegym</a></li>
+            <li class="gym"><a href="#">Stapelbäddsparkens utegym</a></li>
+            <li class="gym"><a href="#">Scaniaparkens utegym</a></li>
+            <li class="gym"><a href="#">Enskifteshagens utegym</a></li>
+            <li class="gym"><a href="#">Blekeparkens utegym</a></li>
+            <li class="gym"><a href="#">Bokskogens utegym</a></li>
           </ul>
+        </form>
+      </div>
+    </nav>
 
-            <ul class="list_ul">
-                %for gym in gyms:
-                <li class="list_li">
-                    <a href="/gym/{{gym[0]}}">
-                        <img src="{{gym[1]}}" alt="Bild på gym">
-                        <p>{{gym[2]}}/5</p>
-                        <div class="overlay">
-                            <div class="text">{{gym[0]}}</div>
-                        </div>
-                    </a>
-                </li>
-                %end
-            </ul>
+<!-- Undermeny -->
+    <div id="sub-menu">
+      <h2>Utegym</h2>
+      <p>Här hittar du alla utegym i Malmö. Från Torups skogsgym i Bokskogen till Rösjöparkens utegym i innerstaden.</p>
+      <!-- Filterknapp -->
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Filtrera efter...</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="/gym">Visa alla betyg</a>
+          <a href="/gym/5">5/5</a>
+          <a href="/gym/4">4/5</a>
+          <a href="/gym/3">3/5</a>
+          <a href="/gym/2">2/5</a>
+          <a href="/gym/1">1/5</a>
         </div>
+      </div>
+    </div>
+
+<!-- Lista med gym -->    
+    <div class="flexbox-container">
+      %for gym in gyms:
+      <div class="flexbox-item">
+        <a href="/gym/{{gym[0]}}">
+          <img src="{{gym[1]}}" alt="Foto på gym">
+          <p>{{gym[2]}}/5</p>
+          <div class="overlay-flex">
+            <div class="text-flex">{{gym[0]}}</div>
+          </div>
+        </a>
+      </div>
+      %end
+    </div>
+
 <!--Knapp som gör att man kommer till början av sidan-->
-        <div>
-          <button id="ScrollToTop">
-            <i class="material-icons">arrow_upward</i>
-            <script src = "static/functions.js">
-              initmap()
-          </script>
-          </button>
-        </div>
+    <div>
+      <button id="ScrollToTop">
+        <i class="material-icons">arrow_upward</i>
+        <script src = "static/functions.js">
+          initmap()
+        </script>
+      </button>
+    </div>
+
 <!-- JavaScript-->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -119,3 +114,10 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     </body>
 </html>
+
+
+<!-- Testing Testing Mesting Festing -->
+
+<div>
+  <p>wtff</p>
+</div>

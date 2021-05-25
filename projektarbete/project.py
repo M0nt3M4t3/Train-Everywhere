@@ -166,4 +166,4 @@ def update_review():
 def static_files(filename):
     return static_file(filename, root="static")
 
-run(host='localhost', port=8000, debug=True, reloader=True)
+run(host='localhost', port=8080, debug=True, reloader=True)
