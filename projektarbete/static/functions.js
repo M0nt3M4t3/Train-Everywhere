@@ -759,7 +759,7 @@ function popup_review() {
 // Filtreringsknapp
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
-function myFunction() {
+function dropdownFilterForAverage() {
     document.getElementById("myDropdown").classList.toggle("show");
   }
   

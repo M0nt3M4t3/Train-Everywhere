@@ -64,33 +64,49 @@
           </div>
         </nav>
 
-<!-- Lista med gym -->
-        <div id="list_container">
-          <div class="dropdown_filter_average">
-            <button onclick="dropdownFilterForAverage()" class="dropbtn">Filtrera utifrån genomsnittsbetyg</button>
-            <div id="filter_dropdown" class="dropdown_values">
-              <a href="/gym">Alla</a>
-              <a href="/gym/5">5</a>
-              <a href="/gym/4">4</a>
-              <a href="/gym/3">3</a>
-              <a href="/gym/2">2</a>
-              <a href="/gym/1">1</a>
+        <!-- Undermeny -->
+        <div id="sub-menu">
+          <h2>Utegym</h2>
+          <p>Här hittar du alla utegym i Malmö. Från Torups skogsgym i Bokskogen till Rösjöparkens utegym i innerstaden.</p>
+          <!-- Filterknapp -->
+          <div class="dropdown">
+            <button onclick="dropdownFilterForAverage()" class="dropbtn">Filtrera efter...</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="/gym">Visa alla betyg</a>
+              <a href="/gym/5">5/5</a>
+              <a href="/gym/4">4/5</a>
+              <a href="/gym/3">3/5</a>
+              <a href="/gym/2">2/5</a>
+              <a href="/gym/1">1/5</a>
             </div>
           </div>
-            <ul class="list_ul">
-                %for gym in gyms:
-                <li class="list_li">
-                    <a href="/gym/{{gym[0]}}">
-                        <img src="{{gym[1]}}" alt="Bild på gym">
-                        <p>{{gym[2]}}/5</p>
-                        <div class="overlay">
-                            <div class="text">{{gym[0]}}</div>
-                        </div>
-                    </a>
-                </li>
-                %end
-            </ul>
         </div>
+        
+    <!-- Lista med gym -->    
+      <div class="flexbox-container">
+        %for gym in gyms:
+        <div class="flexbox-item">
+          <a href="/gym/{{gym[0]}}">
+            <img src="{{gym[1]}}" alt="Foto på gym">
+            <p>{{gym[2]}}/5</p>
+            <div class="overlay-flex">
+              <div class="text-flex">{{gym[0]}}</div>
+            </div>
+          </a>
+        </div>
+        %end
+      </div>
+    
+    <!--Knapp som gör att man kommer till början av sidan-->
+            <div>
+              <button id="ScrollToTop">
+                <i class="material-icons">arrow_upward</i>
+                <script src = "/static/functions.js">
+                  initmap()
+              </script>
+              </button>
+            </div>
+            
 <!--Knapp som gör att man kommer till början av sidan-->
         <div>
           <button id="ScrollToTop">
