@@ -422,29 +422,29 @@ input[type="submit"]:hover {
 
 /* Responsiv design */
 @media screen and (max-width: 600px) {
-
-/* Startsidan */
-.footer_heading,
-.footer_text {
-    margin-left: 20%;
-}
-.search {
-    width: 250px;
-    margin-left: 40px;
-}
-#searchbar {
-    width: 240px;
-}
-/* De enskilda gymmens sidor */
-.btn.btn-outline-secondary {
-    width: 70px;
-    height: 30px;
-    font-size: 13px; 
-    font-family: 'Times New Roman', Times, serif;
-}
-#review_titel > p {
-    float: left;
-}
-#name {
-    width: 160px;
+    /* Startsidan */
+    .footer_heading,
+    .footer_text {
+        margin-left: 20%;
+    }
+    .search {
+        width: 250px;
+        margin-left: 40px;
+    }
+    #searchbar {
+        width: 240px;
+    }
+    /* De enskilda gymmens sidor */
+    .btn.btn-outline-secondary {
+        width: 70px;
+        height: 30px;
+        font-size: 13px; 
+        font-family: 'Times New Roman', Times, serif;
+    }
+    #review_titel > p {
+        float: left;
+    }
+    #name {
+        width: 160px;
+    }
 }
