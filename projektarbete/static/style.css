@@ -125,7 +125,6 @@ footer {
     left: 40%;
     transition: 0.5s;
 }
-
 /* Info om gym */
 #info_gym {
     background-color: rgba(232, 236, 240, 0.9);
@@ -159,7 +158,7 @@ footer {
 }
 
 /* Läsa recension */
-#review_ruta {
+#review_box {
     background-color: white;
     width: 80%;
     height: 200px;
@@ -466,5 +465,10 @@ input[type="submit"]:hover {
     font-size: 13px; 
     font-family: 'Times New Roman', Times, serif;
 }
-
+#review_titel > p {
+    float: left;
+}
+#name {
+    width: 160px; 
+}
 }
