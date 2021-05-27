@@ -86,7 +86,8 @@ footer {
     font-weight: 600;
 }
 #sub-menu > p {
-    display: inline;
+    display: inline-block;
+    width: 700px;
     color: rgb(82, 82, 82);
     margin-left: 30px;
 }
@@ -106,7 +107,6 @@ footer {
 }
 .dropdown {
     position: relative;
-    display: inline;
     float: right;
     margin-right: 30px;
 }
@@ -461,19 +461,79 @@ input[type="submit"]:hover {
 }
 
 /* Responsiv design */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1111px) { 
+    /* Lista med gym */
+    #sub-menu {
+        width: 90%;
+    }
+    .dropbtn {
+        width: 100%;
+    }
+    .dropdown {
+        display: block;
+        float: none;
+        margin: 0;
+    }
+    .dropdown-content {
+        background-color: #f5f6f8bd;
+        width: 100%;
+    }
+    .dropdown-content a:hover {
+        background-color: #d8daddb7;
+    }
+    .flexbox-container {
+        width: 90%;
+    }
+    .flexbox-item > a > img {
+        opacity: 0.8;
+    }
+    .flexbox-item > a > p {
+        opacity: 1;
+        transition: none;
+    }
+    .overlay-flex {
+        transition: none;
+    }
+    .flexbox-item:hover .overlay-flex {
+        height: 16%
+    }    
+
+    /* De enskilda gymmens sidor */
+    #reviews {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) { 
     /* Startsidan */
-    .footer_heading,
-    .footer_text {
+    .footer_heading, .footer_text {
         margin-left: 20%;
     }
     .search {
-        width: 250px;
+        width: 100px;
         margin-left: 40px;
     }
     #searchbar {
-        width: 240px;
+        width: 100px;
     }
+
+    /* Lista med gym */
+    #background {
+        background-image: none;
+    }
+    #sub-menu {
+        width: 100%;
+    }
+    .flexbox-container {
+        width: 100%;
+    }
+    #sub-menu > h2 {
+        font-size: 100px;
+    }
+    #sub-menu > p {
+        font-size: 50px;
+    }
+
     /* De enskilda gymmens sidor */
     .btn.btn-outline-secondary {
         width: 70px;
