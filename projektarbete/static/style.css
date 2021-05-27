@@ -58,19 +58,15 @@ footer {
     width: 50%;
     height: 50%;
     float:right;
-    
 }
-
 #content > p{
     margin: 0px;
-    padding-right: 2%;
-    
+    padding-right: 2%; 
 }
 #content > a {
     padding-right: 1%;
     width: 10px;
 }
-
 #content {
     max-width: 300px;
 }
@@ -95,7 +91,7 @@ footer {
     margin-left: 30px;
 }
 
-/* Dropdown Button */
+/* Dropdown-funktion */
 .dropbtn {
     background: rgb(153, 184, 129);
     color: white;
@@ -215,11 +211,12 @@ footer {
 
 /* Info om gym */
 #info_gym {
-    background-color: rgba(232, 236, 240, 0.9);
-    width: 70%;
+    display: block;
+    background-color: rgba(248, 248, 250, 0.945);
+    width: 80%;
     margin: auto;
     padding: 10px;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
 }
 #gym_pic {
     display: block;
@@ -232,45 +229,67 @@ footer {
     color: rgb(82, 82, 82);
     text-align: center;
     font-size: 40px;
-    margin-top: 10px;
-    padding-bottom: 10px;
+    font-weight: 600;
+    margin-top: 20px;
 }
 #info_gym > p {
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(82, 82, 82);
     text-align: center;
     font-size: 18px;
-    width: 80%;
+    width: 90%;
     margin: auto;
-    padding-top: 20px;
+    margin-top: 20px;
+    padding: 20px;
+}
+#buttton {
+    background: rgb(147, 180, 120);
+    color: white;
+    border-style: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    display: inline;
+    border-radius: 0;
+}
+#buttton:hover {
+    background: rgb(171, 199, 148);
 }
 
 /* Läsa recension */
-#review_box {
-    background-color: white;
-    width: 80%;
-    height: 200px;
-    margin: auto;
-    overflow-y: scroll;
+#reviews {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
 }
-#review_titel {
-    background-color:rgba(255, 255, 255, 0.5);
+#read_review {
+    margin-right: 10px;
+}
+#read_review_titel {
+    background-color:rgb(197, 216, 182);
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 25px;
     text-align: left;
     border-bottom-style: solid;
-    border-bottom-color: rgb(147, 180, 120);
+    border-bottom-color: rgb(121, 151, 96);
     border-bottom-width: 5px;
-    width: 80%;
+    width: 500px;
     margin: auto;
     margin-top: 40px;
     padding: 10px;
 }
-#review_titel > p {
-    display: inline;
+#read_review_titel > p {
+    margin-top: 7px;
     float: right;
-    font-size: 23px;
-    color: rgb(122, 122, 122);
+    font-size: 18px;
+    color: rgb(121, 151, 96);
+}
+#review_box {
+    display: block;
+    background-color: rgb(255, 255, 255);
+    width: 500px;
+    height: 280px;
+    margin: auto;
+    overflow-y: scroll;
 }
 #review {
     height: auto;
@@ -300,28 +319,27 @@ footer {
 
 /* Skriva recension */
 #write_review {
-    background-color: white;
-    width: 50%;
-    height: 100%;
-    margin: auto;
-    margin-top: 40px;
+    margin-left: 10px;
 }
 #write_review_titel {
-    background-color:rgba(230, 230, 230, 0.5);
+    background-color:rgb(197, 216, 182);
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 25px;
     border-bottom-style: solid;
-    border-bottom-color: rgb(147, 180, 120);
+    border-bottom-color: rgb(121, 151, 96);
     border-bottom-width: 5px;
-    padding: 10px; 
+    width: 500px;
+    margin: auto;
+    margin-top: 40px;
+    padding: 10px;
 }
-#write_review > form {
+#review_form {
+    width: 500px;
+    height: 280px;
+    margin: auto;
     background-color: rgb(255, 255, 255);
     font-weight: 500;
-    height: auto;
-    margin: auto;
     padding: 15px;
-    padding-top: 15px;
 }
 #form_gym {
     display: none;

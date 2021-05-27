@@ -72,44 +72,49 @@
             <img src="{{picture}}" id="gym_pic" alt="Bild på gym">
             <h1>{{pagename}}</h1>
             <p>{{!gym_info}}</p>
-            <!-- Läsa recensioner -->
-            <div id="review_titel">
-                Betyg och recensioner
-                <p>Genomsnittsbetyg = {{average}}</p>
-            </div>
-            <div id="review_box">
-                <div id="review">
-                    %for review in reviews:
-                        <p id="name">{{review[0]}}</p>
-                        <p id="grade">{{review[1]}}/5</p>
-                        <p id="date">{{review[2]}}</p>
-                        <p id="comment">{{review[3]}}</p>
-                    %end
+<!-- Läsa recensioner -->
+            <div id="reviews">
+                <div id="read_review">
+                    <div id="read_review_titel">
+                        Betyg och recensioner
+                        <p>Genomsnittsbetyg = {{average}}</p>
+                    </div>
+                    <div id="review_box">
+                        <div id="review">
+                            %for review in reviews:
+                                <p id="name">{{review[0]}}</p>
+                                <p id="grade">{{review[1]}}/5</p>
+                                <p id="date">{{review[2]}}</p>
+                                <p id="comment">{{review[3]}}</p>
+                            %end
+                        </div>
+                    </div>
+                </div>
+    <!-- Ge recensioner -->
+                <div id="write_review">
+                    <div id="write_review_titel">Skriv en recension</div>
+                    <div id="review_form">
+                        <form accept-charset="utf-8" onsubmit="popup_review()" action="/add_review" method="POST">
+                            <label for="name">Namn:</label>
+                            <input type="text" id="name" name="name" required><br>
+                            <label for="rating">Betyg (0-5):</label>
+                            <select id="rating" name="rating">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select><br>
+                            <label for="comment">Recension: </label><br>
+                            <textarea id="comment" name="comment" spellcheck="true" cols="65"></textarea>     
+                            <input type="checkbox" id="gym" name="gym" value="{{pagename}}" required>
+                            <label for="gym"> Jag vill lämna min recension på {{pagename}}</label><br>
+                            <input type="submit" id="submit" value="Skicka!">
+                        </form>
+                    </div>
                 </div>
             </div>
-<!-- Ge recensioner -->
-            <div id="write_review">
-                <div id="write_review_titel">Skriv en recension</div>
-                    <form accept-charset="utf-8" onsubmit="popup_review()" action="/add_review" method="POST">
-                        <label for="name">Namn:</label>
-                        <input type="text" id="name" name="name" required><br>
-                        <label for="rating">Betyg (0-5):</label>
-                        <select id="rating" name="rating">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select><br>
-                        <label for="comment">Recension: </label><br>
-                        <textarea id="comment" name="comment" spellcheck="true" cols="65"></textarea>     
-                        <input type="checkbox" id="gym" name="gym" value="{{pagename}}" required>
-                        <label for="gym"> Jag vill lämna min recension på {{pagename}}</label><br>
-                        <input type="submit" id="submit" value="Skicka!">
-                    </form>
-                </div>
-            </div>
-            <!--Knapp som gör att man kommer till början av sidan-->
+<!--Knapp som gör att man kommer till början av sidan-->
             <div>
                 <button id="ScrollToTop">
                   <i class="material-icons">arrow_upward</i>
