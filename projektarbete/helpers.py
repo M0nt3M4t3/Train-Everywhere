@@ -10,7 +10,7 @@ import datetime
 
 #establishing the connection
 conn = mysql.connector.connect(
-   user='root', password=safety.PW, host='localhost', database='Train_Everywhere' 
+   user=safety.info[0], password=safety.info[1], host=safety.info[2], database=safety.info[3]
 )
 #Creating a cursor object using the cursor() method
 cursor = conn.cursor()
