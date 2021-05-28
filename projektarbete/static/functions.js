@@ -9,7 +9,7 @@ function initMap() {
         center: malmö,
     });
 
-    const Beijersparkscontent = getInfo('Beijersparks utegym', 'i Kirseberga', '/static/photo-id-2005279277125-women-doing-workout-outdoors-on-a-street.jpg');
+    const Beijersparkscontent = getInfo('Beijersparks utegym', 'i Kirseberga', '/static/beijerspark-stock.jpg');
 
 
     const Beijerspark = new google.maps.Marker({
@@ -29,7 +29,7 @@ function initMap() {
         Beijersinfowindow.open(map, Beijerspark);
     });
 
-    const Belluveparkcontent = getInfo('Bellevueparkens utegym', 'i Bellevue', '/static/photo-id-2005279277125-women-doing-workout-outdoors-on-a-street.jpg');
+    const Belluveparkcontent = getInfo('Bellevueparkens utegym', 'i Bellevue', '/static/bellevuepark-stock.jpg');
 
     const Belluvepark = new google.maps.Marker({
         position: {
@@ -48,7 +48,7 @@ function initMap() {
         Belluveparkinfo.open(map, Belluvepark);
     });
 
-    const Blekeparkcontent = getInfo('Blekeparkens utegym', 'i Oxie', '/static/photo-id-2005279277125-women-doing-workout-outdoors-on-a-street.jpg');
+    const Blekeparkcontent = getInfo('Blekeparkens utegym', 'i Oxie', '/static/blekepark-stock.jpg');
 
     const Blekepark = new google.maps.Marker({
         position: {
@@ -68,7 +68,7 @@ function initMap() {
     });
 
 
-    const Bulltoftacontent = getInfo('Bulltoftas utegym', 'i Bulltofta', '/static/photo-id-2005279277125-women-doing-workout-outdoors-on-a-street.jpg');
+    const Bulltoftacontent = getInfo('Bulltoftas utegym', 'i Bulltofta', '/static/bulltofta-stock.jpg');
 
     const Bulltofta = new google.maps.Marker({
         position: {
@@ -107,7 +107,7 @@ function initMap() {
     });
 
 
-    const Enskifteshagencontent = getInfo('Enskifteshagens utegym', 'i Östra Sorgenfri', '/static/photo-id-2005279277125-women-doing-workout-outdoors-on-a-street.jpg');
+    const Enskifteshagencontent = getInfo('Enskifteshagens utegym', 'i Östra Sorgenfri', '/static/enskiftehage-stock.jpg');
 
     const Enskifteshagen = new google.maps.Marker({
         position: {
@@ -126,7 +126,7 @@ function initMap() {
         Enskifteshageninfo.open(map, Enskifteshagen);
     });
 
-    const Söderkullacontent = getInfo('Söderkullas utegym', 'i Söderkulla', '/static/photo-id-2005279277125-women-doing-workout-outdoors-on-a-street.jpg');
+    const Söderkullacontent = getInfo('Söderkullas utegym', 'i Söderkulla', '/static/söderkulla-stock.jpg');
 
     const Söderkulla = new google.maps.Marker({
         position: {
@@ -165,7 +165,7 @@ function initMap() {
         Ymersparkinfo.open(map, Ymerspark);
     });
 
-    const Kalkbrottcontent = getInfo('Lilla Kalkbrottsparkens utegym', 'i Klagshamn', '/static/photo-id-2005279277125-women-doing-workout-outdoors-on-a-street.jpg');
+    const Kalkbrottcontent = getInfo('Lilla Kalkbrottsparkens utegym', 'i Klagshamn', '/static/kalkbrott-stock.jpg');
 
     const Kalkbrott = new google.maps.Marker({
         position: {
@@ -185,7 +185,7 @@ function initMap() {
     });
 
 
-    const Lindängsparkencontent = getInfo('Lindängsparkens utegym', 'i Lindängen', '/static/photo-id-2005279277125-women-doing-workout-outdoors-on-a-street.jpg');
+    const Lindängsparkencontent = getInfo('Lindängsparkens utegym', 'i Lindängen', '/static/lindängpark-stock.jpg');
 
     const Lindängen = new google.maps.Marker({
         position: {
@@ -243,7 +243,7 @@ function initMap() {
         Skogeninfo.open(map, Skogen);
     });
 
-    const Gamlavattentornetcontent = getInfo('Gamla vattentornets utegym', 'i Kronborg', '/static/photo-id-2005279277125-women-doing-workout-outdoors-on-a-street.jpg');
+    const Gamlavattentornetcontent = getInfo('Gamla vattentornets utegym', 'i Kronborg', '/static/gamla-vattentornet-stock.jpg');
 
     const Gamlavattentornet = new google.maps.Marker({
         position: {
@@ -301,7 +301,7 @@ function initMap() {
         Öresundinfo.open(map, Öresund);
     });
 
-    const Videdalsparkencontent = getInfo('Videdalsparkens utegym', 'i Videdal', '/static/photo-id-2005279277125-women-doing-workout-outdoors-on-a-street.jpg');
+    const Videdalsparkencontent = getInfo('Videdalsparkens utegym', 'i Videdal', '/static/videdalspark-stock.jpg');
 
     const Videdal = new google.maps.Marker({
         position: {
@@ -319,7 +319,7 @@ function initMap() {
     Videdal.addListener("click", () => {
         Videdalsparkeninfo.open(map, Videdal);
     });
-    const Tygelsjöcontent = getInfo('Tygelsjös utegym', 'i Tygelsjö', '/static/photo-id-2005279277125-women-doing-workout-outdoors-on-a-street.jpg');
+    const Tygelsjöcontent = getInfo('Tygelsjös utegym', 'i Tygelsjö', '/static/tygelsjö-stock.jpg');
 
     const Tygelsjö = new google.maps.Marker({
         position: {
@@ -340,7 +340,7 @@ function initMap() {
     });
 
 
-    const Sundsbroparkencontent = getInfo('Sundsbroparkens utegym', 'i Bunkeflostrand', '/static/photo-id-2005279277125-women-doing-workout-outdoors-on-a-street.jpg');
+    const Sundsbroparkencontent = getInfo('Sundsbroparkens utegym', 'i Bunkeflostrand', '/static/sundsbropark-stock.jpg');
 
     const Sundsbroparken = new google.maps.Marker({
         position: {
@@ -379,7 +379,7 @@ function initMap() {
         Stapelbäddsparkeninfo.open(map, Stapelbäddsparken);
     });
 
-    const Nydalacontent = getInfo('Nydalaparkens utegym','i Nydala','/static/photo-id-2005279277125-women-doing-workout-outdoors-on-a-street.jpg');
+    const Nydalacontent = getInfo('Nydalaparkens utegym','i Nydala','/static/nydalapark-stock.jpg');
     
 
     const Nydala = new google.maps.Marker({
@@ -399,7 +399,7 @@ function initMap() {
         Nydalainfo.open(map, Nydala);
     });
 
-    const Spillepengcontent = getInfo('Spillepengs fritidsområde','i Spillepengen','/static/photo-id-2005279277125-women-doing-workout-outdoors-on-a-street.jpg');
+    const Spillepengcontent = getInfo('Spillepengs fritidsområde','i Spillepengen','/static/spillepeng-stock.jpg');
     
 
     const Spillepeng = new google.maps.Marker({
@@ -420,7 +420,7 @@ function initMap() {
     });
 
 
-    const Sibbarpcontent = getInfo('Sibbarps utegym','i Sibbarp','/static/photo-id-2005279277125-women-doing-workout-outdoors-on-a-street.jpg');
+    const Sibbarpcontent = getInfo('Sibbarps utegym','i Sibbarp','/static/sibbarp-stock.jpg');
     
 
     const Sibbarp = new google.maps.Marker({
@@ -461,7 +461,7 @@ function initMap() {
     });
 
 
-    const Rörsjöparkencont = getInfo('Rörsjöparkens utegym','i Rörsjöstaden','/static/photo-id-2005279277125-women-doing-workout-outdoors-on-a-street.jpg');
+    const Rörsjöparkencont = getInfo('Rörsjöparkens utegym','i Rörsjöstaden','/static/rörsjöpark-stock.jpg');
    
 
 
@@ -502,7 +502,7 @@ function initMap() {
     });
 
 
-    const Rosengårdcontent = getInfo('Rosengårds utegym', 'i Rosengård','/static/photo-id-2005279277125-women-doing-workout-outdoors-on-a-street.jpg');
+    const Rosengårdcontent = getInfo('Rosengårds utegym', 'i Rosengård','/static/rosengård-stock.jpg');
     
 
     const Rosengård = new google.maps.Marker({
