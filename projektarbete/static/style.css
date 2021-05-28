@@ -30,19 +30,22 @@ footer {
 }
 
 /* Startsida */
+#home_page {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    color: rgb(82, 82, 82);
+    width: 80%;
+    margin: auto;
+}
 #home_page > h2 {
-    text-align: center;
     font-family: 'Times New Roman', Times, serif;
-    color: rgb(82, 82, 82);
     padding-top: 20px;
+    font-size: 50px;
+    font-weight: 600;
 }
-#home_page > p {
-    font-family: 'Times New Roman', Times, serif;
-    text-align: center;
-    color: rgb(82, 82, 82);
-    width: 70%;
-    margin-left: 15%;
-}
+
+
+
 .nav-item {
     float:right;
     padding-left: 40px;
@@ -86,6 +89,7 @@ footer {
     font-weight: 600;
 }
 #sub-menu > p {
+    font-family: 'Open Sans', sans-serif;
     display: inline-block;
     width: 700px;
     color: rgb(82, 82, 82);
@@ -99,6 +103,7 @@ footer {
     padding: 10px;
     font-size: 16px;
     font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
     border: none;
     cursor: pointer;
 }
@@ -154,6 +159,8 @@ footer {
 .flexbox-item > a > p {
     opacity: 0;
     font-size: 40px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
     color: white;
     position: absolute;
     top: 20%;
@@ -167,12 +174,12 @@ footer {
     right: 0;
     height: 30px;
     width: 100%;
-    background-color: rgb(222, 222, 228);
+    background-color: rgb(196, 212, 184);;
     transition: .3s ease;
 }
 .text-flex {
     color: rgb(0, 0, 0);
-    background-color: rgb(222, 222, 228);
+    background-color: rgb(196, 212, 184);
     width: 100%;
     position: absolute;
     top: 50%;
@@ -180,6 +187,7 @@ footer {
     text-align: center;
     height: 30px;
     font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
     margin-top: 0%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -198,21 +206,11 @@ footer {
 .flexbox-item:hover p {
     opacity: 1;
 }
-.list_li > a > p {
-    opacity: 0;
-    font-size: 45px;
-    font-family: 'Zilla Slab', serif;    
-    color:rgb(255, 255, 255);
-    position: absolute;
-    top: 25%;
-    left: 40%;
-    transition: 0.5s;
-}
 
 /* Info om gym */
 #info_gym {
     display: block;
-    background-color: rgba(248, 248, 250, 0.945);
+    background-color: rgba(248, 248, 250, 0.938);
     width: 80%;
     margin: auto;
     padding: 10px;
@@ -228,19 +226,18 @@ footer {
     font-family: 'Times New Roman', Times, serif;
     color: rgb(82, 82, 82);
     text-align: center;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 600;
     margin-top: 20px;
 }
 #info_gym > p {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: rgb(82, 82, 82);
     text-align: center;
     font-size: 18px;
-    width: 90%;
+    width: 85%;
     margin: auto;
-    margin-top: 20px;
-    padding: 20px;
+    margin-top: 40px;
 }
 #buttton {
     background: rgb(147, 180, 120);
@@ -248,6 +245,7 @@ footer {
     border-style: none;
     padding: 10px 20px;
     margin-left: 10px;
+    margin-top: 20px;
     display: inline;
     border-radius: 0;
 }
@@ -266,7 +264,7 @@ footer {
 }
 #read_review_titel {
     background-color:rgb(197, 216, 182);
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 25px;
     text-align: left;
     border-bottom-style: solid;
@@ -323,7 +321,7 @@ footer {
 }
 #write_review_titel {
     background-color:rgb(197, 216, 182);
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 25px;
     border-bottom-style: solid;
     border-bottom-color: rgb(121, 151, 96);
@@ -372,28 +370,31 @@ input[type="submit"]:hover {
 
 /* Linje under rubriken på första sidan */
 .line {
-    width: 80%;
-    border: 1px solid; 
-    opacity: 0.2;
-    color: black;
+    width: 100%;
+    color:  rgb(82, 82, 82);
 }
-.footer_div {
-    float: left;
-    background-color: #f8f9fa;
-    opacity: 0.8;
-    width: 33.33%;
-    height: 168px;
+#footer_div {
+    margin-top: 50px;
+    padding-bottom: 20px;
+    width: 100%;
+    background-color: rgb(248, 248, 250);
+    color:  rgb(82, 82, 82);
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
 }
-.footer_heading {
-    margin-top: 10px;
-    margin-left: 40%;
+#footer_div h5 {
     font-family: 'Times New Roman', Times, serif;
+    margin-top: 20px;
+    margin-bottom: 5px;
 }
-.footer_text {
-    margin-top: 10px;
-    margin-left: 40%;
-    font-family: 'Times New Roman', Times, serif;
+#footer_members > div > p {
+    display: inline;
+    margin-right: 15px;
 }
+
+
 
 /* Sökruta */
 #searchbar {
@@ -443,8 +444,8 @@ input[type="submit"]:hover {
 /* Knapp som tar dig till toppen av sidan */
 #ScrollToTop {
     position: fixed;
-    right: 15px;
-    bottom: 10px;
+    right: 20px;
+    bottom: 15px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -461,7 +462,7 @@ input[type="submit"]:hover {
 }
 
 /* Responsiv design */
-@media screen and (max-width: 1111px) { 
+@media screen and (max-width: 1300px) { 
     /* Lista med gym */
     #sub-menu {
         width: 90%;
@@ -482,7 +483,7 @@ input[type="submit"]:hover {
         background-color: #d8daddb7;
     }
     .flexbox-container {
-        width: 90%;
+        width: 95%;
     }
     .flexbox-item > a > img {
         opacity: 0.8;
