@@ -146,7 +146,7 @@ function initMap() {
     });
 
 
-    const Ymersparkcontent = getInfo('Ymersparks utegym', 'i Hyllie', '/static/photo-id-2005279277125-women-doing-workout-outdoors-on-a-street.jpg');
+    const Ymersparkcontent = getInfo('Hyllies utegym', 'i Hyllie', '/static/Hyllies_utegym.jpg');
 
     const Ymerspark = new google.maps.Marker({
         position: {
@@ -204,7 +204,7 @@ function initMap() {
     Lindängsparkeninfo.open(map, Lindängen);
     });
 
-    const Hylliesportbycontent = getInfo('Hyllie sportbyns utegym', 'i Hyllie', '/static/photo-id-2005279277125-women-doing-workout-outdoors-on-a-street.jpg');
+    const Hylliesportbycontent = getInfo('Hyllie sportbyns utegym', 'i Hyllie', '/static/Hyllie_sportbyns_utegym.jpg');
 
     const Hylliesportby = new google.maps.Marker({
         position: {
