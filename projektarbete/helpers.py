@@ -101,9 +101,7 @@ def get_gym_id(gym):
             WHERE Namn = '%s'""" % (gym)
     cursor.execute (gym_idQuery)
     gym_id = cursor.fetchall()
-    gym_id = gym_id[0]
-    gym_id = gym_id[0]
-    return gym_id
+    return gym_id[0][0]
 
 def get_gyms():
     '''Returnerar alla Namn och bilder från Utegyms tabellen i Utegym 
