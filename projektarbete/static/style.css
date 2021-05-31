@@ -392,9 +392,15 @@ input[type="submit"]:hover {
 #footer_members > div > p {
     display: inline;
     margin-right: 15px;
+
 }
-
-
+#footer_div > div > a{
+    color:  rgb(82, 82, 82);
+}
+#footer_div > div > a:hover{
+    color: black;
+    text-decoration: none;
+}
 
 /* Sökruta */
 #searchbar {
