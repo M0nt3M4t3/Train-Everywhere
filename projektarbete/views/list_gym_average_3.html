@@ -1,86 +1,86 @@
 <!DOCTYPE html>
 <html lang="sv">
     <head>
-        <title>Utegym</title>
-        <meta charset="utf-8">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <link href="/static/style.css" rel="stylesheet" type="text/css">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+      <title>Utegym</title>
+      <meta charset="utf-8">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <link href="/static/style.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">   
     </head>
     <body id="background">
 
 <!-- Navbar -->
-        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-              <a class="navbar-brand" href="/">
-                <img src="/static/logga.jpg" id="logotype" alt="logotype">  
-              </a>
-              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link" href="/">Hem</a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="/gym">Alla gym<span class="sr-only">(current)</span></a>
-                </li>
-              </ul>
-
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">
+        <img src="/static/logga.jpg" id="logotype" alt="logotype">  
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Hem</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/gym">Alla gym<span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
 <!-- Sökruta i navbar -->
-          <form id="search">
-            <input id="searchbar" onkeyup="search_gym()" type="text" name="search" placeholder="Sök...">
-            <ul id="list">
-              <li class="gym"><a href="http://localhost:8000/gym/Beijersparks%20utegym">Beijersparks utegym</a></li>
-              <li class="gym"><a href="http://localhost:8000/gym/Bellevueparkens%20utegym">Bellevueparkens utegym</a></li>
-              <li class="gym"><a href="http://localhost:8000/gym/Blekeparkens%20utegym">Blekeparkens utegym</a></li>
-              <li class="gym"><a href="http://localhost:8000/gym/Bulltoftas%20utegym">Bulltoftas utegym</a></li>
-              <li class="gym"><a href="http://localhost:8000/gym/Djupadalsparkens%20utegym">Djupadalsparkens utegym</a></li>
-              <li class="gym"><a href="http://localhost:8000/gym/Enskifteshagens%20utegym">Enskifteshagens utegym</a></li>
-              <li class="gym"><a href="http://localhost:8000/gym/Gamla%20vattentornets%20utegym">Gamla vattentornets utegym</a></li>
-              <li class="gym"><a href="http://localhost:8000/gym/Hyllies%20utegym">Hyllies utegym</a></li>
-              <li class="gym"><a href="http://localhost:8000/gym/Hyllie%20sportbyns%20utegym">Hyllie sportbyns utegym</a></li>
-              <li class="gym"><a href="http://localhost:8000/gym/Lilla%20kalkbrottsparkens%20utegym">Lilla kalkbrottsparkens utegym</a></li>
-              <li class="gym"><a href="http://localhost:8000/gym/Lind%C3%A4ngsparkens%20utegym">Lindängsparkens utegym</a></li>
-              <li class="gym"><a href="http://localhost:8000/gym/Nydalaparkens%20utegym">Nydalaparkens utegym</a></li>
-              <li class="gym"><a href="http://localhost:8000/gym/Ribergsborgsstrandens%20utegym">Ribersborgsstrandens utegym</a></li>
-              <li class="gym"><a href="http://localhost:8000/gym/Roseng%C3%A5rds%20utegym">Rosengårds utegym</a></li>
-              <li class="gym"><a href="http://localhost:8000/gym/R%C3%B6rsj%C3%B6parkens%20utegym">Rörsjöparkens utegym</a></li>
-              <li class="gym"><a href="http://localhost:8000/gym/Scaniaparkens%20utegym">Scaniaparkens utegym</a></li>
-              <li class="gym"><a href="http://localhost:8000/gym/Sibbarps%20utegym">Sibbarps utegym</a></li>
-              <li class="gym"><a href="http://localhost:8000/gym/Skogens%20utegym">Skogens utegym</a></li>
-              <li class="gym"><a href="http://localhost:8000/gym/Spillepengs%20fritidsomr%C3%A5de">Spillepengs fritidsområde</a></li>
-              <li class="gym"><a href="http://localhost:8000/gym/Stapelb%C3%A4ddsparkens%20utegym">Stapelbäddsparkens utegym</a></li>
-              <li class="gym"><a href="http://localhost:8000/gym/Sundsbroparkens%20utegym">Sundsbroparkens utegym</a></li>
-              <li class="gym"><a href="http://localhost:8000/gym/S%C3%B6derkullas%20utegym">Söderkullas utegym</a></li>
-              <li class="gym"><a href="http://localhost:8000/gym/Torups%20skogsgym">Torups skogsgym</a></li>
-              <li class="gym"><a href="http://localhost:8000/gym/Tygelsj%C3%B6s%20utegym">Tygelsjös utegym</a></li>
-              <li class="gym"><a href="http://localhost:8000/gym/Videdalsparkens%20utegym">Videdalsparkens utegym</a></li>
-              <li class="gym"><a href="http://localhost:8000/gym/%C3%96resunds%20Funkis">Öresunds funkis</a></li>
-          </ul>
-          </form>
-          </div>
-        </nav>
+        <form class="search">
+          <input id="searchbar" onkeyup="search_gym()" type="text" name="search" placeholder="Sök...">
+          <ul id="list">
+            <li class="gym"><a href="http://localhost:8000/gym/Beijersparks%20utegym">Beijersparks utegym</a></li>
+            <li class="gym"><a href="http://localhost:8000/gym/Bellevueparkens%20utegym">Bellevueparkens utegym</a></li>
+            <li class="gym"><a href="http://localhost:8000/gym/Blekeparkens%20utegym">Blekeparkens utegym</a></li>
+            <li class="gym"><a href="http://localhost:8000/gym/Bulltoftas%20utegym">Bulltoftas utegym</a></li>
+            <li class="gym"><a href="http://localhost:8000/gym/Djupadalsparkens%20utegym">Djupadalsparkens utegym</a></li>
+            <li class="gym"><a href="http://localhost:8000/gym/Enskifteshagens%20utegym">Enskifteshagens utegym</a></li>
+            <li class="gym"><a href="http://localhost:8000/gym/Gamla%20vattentornets%20utegym">Gamla vattentornets utegym</a></li>
+            <li class="gym"><a href="http://localhost:8000/gym/Hyllies%20utegym">Hyllies utegym</a></li>
+            <li class="gym"><a href="http://localhost:8000/gym/Hyllie%20sportbyns%20utegym">Hyllie sportbyns utegym</a></li>
+            <li class="gym"><a href="http://localhost:8000/gym/Lilla%20kalkbrottsparkens%20utegym">Lilla kalkbrottsparkens utegym</a></li>
+            <li class="gym"><a href="http://localhost:8000/gym/Lind%C3%A4ngsparkens%20utegym">Lindängsparkens utegym</a></li>
+            <li class="gym"><a href="http://localhost:8000/gym/Nydalaparkens%20utegym">Nydalaparkens utegym</a></li>
+            <li class="gym"><a href="http://localhost:8000/gym/Ribergsborgsstrandens%20utegym">Ribersborgsstrandens utegym</a></li>
+            <li class="gym"><a href="http://localhost:8000/gym/Roseng%C3%A5rds%20utegym">Rosengårds utegym</a></li>
+            <li class="gym"><a href="http://localhost:8000/gym/R%C3%B6rsj%C3%B6parkens%20utegym">Rörsjöparkens utegym</a></li>
+            <li class="gym"><a href="http://localhost:8000/gym/Scaniaparkens%20utegym">Scaniaparkens utegym</a></li>
+            <li class="gym"><a href="http://localhost:8000/gym/Sibbarps%20utegym">Sibbarps utegym</a></li>
+            <li class="gym"><a href="http://localhost:8000/gym/Skogens%20utegym">Skogens utegym</a></li>
+            <li class="gym"><a href="http://localhost:8000/gym/Spillepengs%20fritidsomr%C3%A5de">Spillepengs fritidsområde</a></li>
+            <li class="gym"><a href="http://localhost:8000/gym/Stapelb%C3%A4ddsparkens%20utegym">Stapelbäddsparkens utegym</a></li>
+            <li class="gym"><a href="http://localhost:8000/gym/Sundsbroparkens%20utegym">Sundsbroparkens utegym</a></li>
+            <li class="gym"><a href="http://localhost:8000/gym/S%C3%B6derkullas%20utegym">Söderkullas utegym</a></li>
+            <li class="gym"><a href="http://localhost:8000/gym/Torups%20skogsgym">Torups skogsgym</a></li>
+            <li class="gym"><a href="http://localhost:8000/gym/Tygelsj%C3%B6s%20utegym">Tygelsjös utegym</a></li>
+            <li class="gym"><a href="http://localhost:8000/gym/Videdalsparkens%20utegym">Videdalsparkens utegym</a></li>
+            <li class="gym"><a href="http://localhost:8000/gym/%C3%96resunds%20Funkis">Öresunds funkis</a></li>
+        </ul>
+        </form>
+      </div>
+    </nav>
 
-        <!-- Undermeny -->
-        <div id="sub-menu">
-          <h2>Utegym</h2>
-          <p>Här hittar du alla utegym i Malmö med genomsnittsbetyg 3. Från Torups skogsgym i Bokskogen till Rösjöparkens utegym i innerstaden.</p>
-          <!-- Filterknapp -->
-          <div class="dropdown">
-            <button onclick="dropdownFilterForAverage()" class="dropbtn">Filtrera efter...</button>
-            <div id="myDropdown" class="dropdown-content">
-              <a href="/gym">Visa alla betyg</a>
-              <a href="/gym/5">5/5</a>
-              <a href="/gym/4">4/5</a>
-              <a href="/gym/3">3/5</a>
-              <a href="/gym/2">2/5</a>
-              <a href="/gym/1">1/5</a>
-            </div>
-          </div>
+<!-- Undermeny -->
+    <div id="sub-menu">
+      <h2>Utegym</h2>
+      <p>Här hittar du alla utegym i Malmö med genomsnittsbetyg 3. Från Torups skogsgym i Bokskogen till Rösjöparkens utegym i innerstaden.</p>
+<!-- Filterknapp -->
+      <div class="dropdown">
+        <button onclick="dropdownFilterForAverage()" class="dropbtn">Filtrera efter...</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="/gym">Visa alla betyg</a>
+          <a href="/gym/5">5/5</a>
+          <a href="/gym/4">4/5</a>
+          <a href="/gym/3">3/5</a>
+          <a href="/gym/2">2/5</a>
+          <a href="/gym/1">1/5</a>
         </div>
+      </div>
+    </div>
         
     <!-- Lista med gym -->    
       <div class="flexbox-container">
