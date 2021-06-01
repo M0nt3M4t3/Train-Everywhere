@@ -60,14 +60,26 @@
                         <a class="gym" href="http://localhost:8000/gym/%C3%96resunds%20Funkis">Öresunds funkis</a>
                     </div>
                 </form>
+<!-- Google Översätt -->
+                <div class="translate">
+                    <button type="button" class="translate_button" onclick="dropdownGoogleTranslate()"></button>
+                    <div id="myDropdown_translate" class="google_translate_element">
+                        <p>Översätt sidan</p>
+                        <div id="google_translate_element"></div>
+                        <script src="/static/functions.js">
+                        dropdownGoogleTranslate();
+                        </script>
+                    </div>
+                </div>
             </div>
         </nav>
 
 <!-- Karta -->
         <header>
             <div id="map">
-                <script src="static/functions.js"></script>
-                    initmap()
+                <script src="/static/functions.js">
+                initmap();
+                </script>
             </div>
         </header>
         <main>
@@ -106,6 +118,7 @@
         </div>
 
 <!-- JavaScript-->
+<!--Google Translate API --><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         <script src ="static/instant-search.js" type="module"></script>

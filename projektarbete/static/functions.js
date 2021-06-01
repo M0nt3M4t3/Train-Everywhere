@@ -561,7 +561,6 @@ ScrollToTop.addEventListener("click", function (){
     });
 });
 
-
 // Popup-funktion
 function popup_review() {
     alert("Tack för din recension!")
@@ -583,4 +582,26 @@ window.onclick = function(event) {
             }
         }
     }
+}
+
+// Google Översätt
+function dropdownGoogleTranslate() {
+    document.getElementById("myDropdown_translate").classList.toggle("show");
+}
+  
+window.onclick = function(event) {
+    if (!event.target.matches('.translate_button')) {
+        var dropdowns = document.getElementsByClassName("google_translate_element");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'sv'}, 'google_translate_element');
 }

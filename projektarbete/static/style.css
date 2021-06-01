@@ -74,12 +74,46 @@ footer {
     font-size: 15px;
     font-family: 'Open Sans', sans-serif;
     color: black;
-    padding-left: 10px;
 }
 #list > a:hover, a:active {
     background-color: #d8dadd;
-    color: white;
     text-decoration: none;
+}
+
+/* Google Översätt */
+.translate_button {
+    background-image: url("/static/Google_Translate_logo.png");
+    background-size: contain;
+    width: 40px;
+    height: 40px;  
+    margin: 0px 20px;
+    border-style: none;
+}
+.translate_button:hover {
+    opacity: 0.5;
+}
+.translate_button:active {
+    opacity: 0.5;
+    border-style: none;
+}
+.google_translate_element {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    margin-left: -150px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    width: 300px;
+    text-align: center;
+    background-color: white;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.show {
+    display: block;
 }
 
 /* Startsida */
@@ -221,7 +255,6 @@ footer {
     position: absolute;
     bottom: 0;
     left: 0;
-    right: 0;
     height: 30px;
     width: 100%;
     background-color: rgb(196, 212, 184);;

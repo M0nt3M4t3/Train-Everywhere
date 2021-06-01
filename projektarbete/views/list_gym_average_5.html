@@ -61,8 +61,19 @@
               <a class="gym" href="http://localhost:8000/gym/%C3%96resunds%20Funkis">Öresunds funkis</a>
           </div>
         </form>
+<!-- Google Översätt -->
+      <div class="translate">
+        <button type="button" class="translate_button" onclick="dropdownGoogleTranslate()"></button>
+        <div id="myDropdown_translate" class="google_translate_element">
+            <p>Översätt sidan</p>
+            <div id="google_translate_element"></div>
+            <script src="/static/functions.js">
+            dropdownGoogleTranslate();
+            </script>
+        </div>
       </div>
-    </nav>
+    </div>
+  </nav>
 
 <!-- Undermeny -->
     <div id="sub-menu">
@@ -107,6 +118,7 @@
 
         
 <!-- JavaScript-->
+<!--Google Translate API --><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
