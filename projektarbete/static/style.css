@@ -506,10 +506,10 @@ input[type="submit"]:hover {
 }
 
 /* Responsiv design */
-@media screen and (max-width: 1300px) { 
+@media screen and (max-width: 800px) { 
     /* Lista med gym */
     #sub-menu {
-        width: 90%;
+        width: 80%;
     }
     .dropbtn {
         width: 100%;
@@ -573,10 +573,11 @@ input[type="submit"]:hover {
         width: 100%;
     }
     #sub-menu > h2 {
-        font-size: 100px;
+        font-size: 10vw;
     }
     #sub-menu > p {
-        font-size: 50px;
+        font-size: 5vw;
+        width: 80%;
     }
 
     /* De enskilda gymmens sidor */
