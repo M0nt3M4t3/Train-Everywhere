@@ -139,6 +139,15 @@ footer {
     height: 450px;
     width: 100%;
 }
+footer{
+    position:fixed;
+    width: 100%;
+    left:0px;
+    bottom:0px;
+}
+#footer_div{
+    width: 100%;
+}
 
 /*Info rutorna på kartan*/
 #pictureongym {
@@ -551,6 +560,7 @@ input[type="submit"]:hover {
 
 @media screen and (max-width: 600px) { 
     /* Startsidan */
+    
     .footer_heading, .footer_text {
         margin-left: 20%;
     }
@@ -560,6 +570,34 @@ input[type="submit"]:hover {
     }
     #searchbar {
         width: 100px;
+    }
+    .footer_div .footer_left,
+    .footer_div .footer_center,
+    .footer_div .footer_right{
+        display: inline-block;
+	    vertical-align: top;
+    }
+    .footer_div .footer_left{
+        width:30%;
+        margin-right: 3px;
+    }
+    .footer_div .footer_center{
+        width:35%;
+        margin-left: 3px;
+    }
+    .footer_div .footer_right{
+        width:30%;
+    }
+    .footer_div .footer_left,
+    .footer_div .footer_center,
+    .footer_div .footer_right{
+        display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+    .footer_div .footer_center i{
+        margin-left:0;
     }
 
     /* Lista med gym */
